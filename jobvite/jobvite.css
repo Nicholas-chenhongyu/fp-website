@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'D-DIN-Bold';
+    src: url('/jobvite/fonts/D-DIN-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'D-DIN-Bold-Exp';
+    src: url('/jobvite/fonts/D-DINExp-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.jv-wrapper h2 {
+	color: #ff5a00;
+	text-align: center;
+	margin-bottom: 62px;
+	font-size: 2.5rem;
+	line-height: 2.75rem;
+	text-transform: uppercase;
+	letter-spacing: 3.35px;
+	font-weight: bold;
+	font-family: D-DIN-Bold,sans-serif;
+}
+
+.jv-wrapper h3 {
+	font-family: D-DIN-Bold-Exp,sans-serif;
+	color: #000;
+	margin-bottom: 5px;
+}
+
+
+.jv-wrapper a {
+	color: #000;
+}
+.jv-wrapper a:hover {
+	color: #ff5a00;
+}
+
+.jv-button {
+	font-family: D-DIN-Bold-Exp,sans-serif;
+	font-size: 1rem;
+	text-transform: uppercase;
+	background-color: #ff5a00;
+	color: #fff;
+	border: none;
+	text-shadow: none;
+	background-image: none;
+}
+.jv-button:hover {
+	background: #e15000;
+	color: #fff;
+}
+
+.jv-current-openings a {
+	color: #000;
+}
+.jv-current-openings a:hover {
+	background-color: #ff5a00;
+}

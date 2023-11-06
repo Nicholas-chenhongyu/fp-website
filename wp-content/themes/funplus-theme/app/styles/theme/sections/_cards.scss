@@ -1,0 +1,119 @@
+.cards{
+    color: $white;
+    background-color: $black;
+    padding: 80px 0;
+
+    .swiper-container{
+        overflow: visible;
+    }
+    .swiper-container:not(.activate-slider){
+        overflow: visible;
+        margin-left: 0;
+        margin-right: 0;
+
+        .swiper-wrapper{
+            display: flex;
+
+            .swiper-slide{
+                max-width: auto;
+                padding-left: 0;
+                padding-right: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__card{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        background-color: $orange;
+        height: 360px;
+        @include borderRadius(32px);
+        @include transform(skew(0deg));
+
+        &.dark{
+            background-color: $black;
+        }
+        &__inner{
+            height: 100%;
+            padding: 32px 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include transform(skew(0deg));
+        }
+        &__background{
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: auto;
+            opacity: 0.4;
+            @include transform(translateX(-50%) skew(6deg));
+        }
+        &__excerpt{
+            &__full{
+                display: none;
+            }
+            &__trimmed{
+                display: block;
+            }
+        }
+        &__title{
+            font-family: $font-d-din-bold;
+            width: 100%;
+            margin: 0;
+        }
+        &__subtitle{
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-family: $font-d-din-bold;
+            width: 100%;
+        }
+    }
+    @include media-breakpoint-up-width(lg){
+        padding: 80px 0 134px;
+        
+        .swiper-container:not(.activate-slider){
+            margin-left: -16px;
+            margin-right: -16px;
+
+            .swiper-wrapper{
+                display: flex;
+                flex-wrap: wrap;
+
+                .swiper-slide{
+                    width: 33.3333333%;
+                    padding-left: 16px;
+                    padding-right: 16px;
+                    margin-bottom: 32px;
+                }
+            }
+        }
+        &__card{
+            height: 505px;
+            @include borderRadius(32px);
+            @include transform(skew(-6deg));
+
+            &__inner{
+                padding: 50px 54px;
+                @include transform(skew(6deg));
+            }
+            &__excerpt{
+                &__full{
+                    display: block;
+                }
+                &__trimmed{
+                    display: none;
+                }
+            }
+            &__title{
+                width: 70%;
+            }
+            &__subtitle{
+                width: 80%;
+            }
+        }
+    }
+}

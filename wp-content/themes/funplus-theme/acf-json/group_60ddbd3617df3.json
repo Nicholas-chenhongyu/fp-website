@@ -1,0 +1,42 @@
+{
+    "key": "group_60ddbd3617df3",
+    "title": "Clone - Banner Spacing",
+    "fields": [
+        {
+            "key": "field_60ddbd3ebf58f",
+            "label": "Remove Spacing",
+            "name": "banner_remove_spacing",
+            "type": "true_false",
+            "instructions": "Remove spacing from the bottom of the banner. The spacer when turned on, will create a space between the banner block and the first block on the page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "=="
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1626362912
+}

@@ -1,0 +1,237 @@
+// .fadeInUpwards
+@include keyframes(fadeInUpwards) {
+    from {
+        opacity: 0;
+        @include transform(translate3d(0, 100px, 0));
+    }
+    to {
+        opacity: 1;
+        @include transform(translate3d(0));
+    }
+}
+
+@include keyframes(fadeInUpwardsSm) {
+    from {
+        opacity: 0;
+        @include transform(translate3d(0, 50px, 0));
+    }
+    to {
+        opacity: 1;
+        @include transform(translate3d(0));
+    }
+}
+
+// .fadeIn
+@include keyframes(fadeIn2){
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@include keyframes(fadeInUpSkew) {
+    from {
+        opacity: 0;
+        @include transform(skew(-6deg) translate(-13.5px, 13.5px));
+    }
+    to {
+        opacity: 1;
+        @include transform(skew(-6deg) translate(0,0));
+    }
+}
+
+// .fadeZoomOut
+@include keyframes(fadeZoomOut){
+    0%{
+        opacity: 0;
+        @include transform(perspective(1px) scale(0.5));
+    }
+    50%{
+        @include transform(perspective(1px) scale(1.03));
+    }
+    100%{
+        opacity: 1;
+        @include transform(perspective(1px) scale(1));
+    }
+}
+
+// .fadeZoomIn
+@include keyframes(fadeZoomIn){
+    0%{
+        opacity: 0;
+        @include transform(perspective(1px) scale(1.03));
+    }
+    20%{
+        opacity: .1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        @include transform(perspective(1px) scale(1));
+    }
+}
+
+// .zoomIn
+@include keyframes(zoomIn){
+    from{
+        @include transform(perspective(1px) scale(1));
+    }
+    to{
+        @include transform(perspective(1px) scale(1.05));
+    }
+}
+
+// .uncoverFromLeft
+@include keyframes(uncoverFromLeft){
+    from { 
+        opacity: 1;
+        clip-path: polygon(0 100%, 0 100%, 0 0, 0 0); 
+        -webkit-clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
+    }
+    to { 
+        opacity: 1;
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0); 
+        -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0); 
+    }
+}
+
+@include keyframes(uncoverFromBottom){
+    from { 
+        opacity: 1;
+        clip-path: inset(100% 0 0 0)
+    }
+    to { 
+        opacity: 1;
+        clip-path: inset(0)
+
+        // clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0); 
+        // -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0); 
+    }
+}
+
+// .squeezeIn
+@include keyframes(squeezeIn){
+    0%{
+        opacity: 0;
+        @include transform(perspective(1px) scale(.7));
+    }
+    100%{
+        opacity: 1;
+        @include transform(perspective(1px) scale(1));
+    }
+}
+
+// .squeezeInBounce
+@include keyframes(squeezeInBounce){
+    0%{
+        opacity: 0;
+        @include transform(perspective(1px) scale(.7));
+    }
+    50%{
+        opacity: 1;
+        @include transform(perspective(1px) scale(1.01));
+    }
+    100%{
+        opacity: 1;
+        @include transform(perspective(1px) scale(1));
+    }
+}
+
+// .slideUp
+@include keyframes(slideUp){
+    from{
+        @include transform(translateY(100px));
+    }
+    to{
+        @include transform(translateY(0));
+    }
+}
+
+// .swiperSlideFade
+@include keyframes(swiperSlideFade){
+    from{
+        opacity: 0;
+        @include transform(translateX(100%));
+    }
+    to{
+        opacity: 1;
+        @include transform(translateX(0));
+    }
+}
+
+
+
+
+// Animations specific to their own pages
+
+// Navigational Menu Items
+@include keyframes(navItemText) {
+    to{
+        background-position: -200%;
+    }
+}
+
+// .uncoverBannerBg
+@include keyframes(uncoverBannerBg){
+    from { 
+        clip-path: polygon(0 100%, 0 100%, 0 0, 0 0); 
+        -webkit-clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
+    }
+    to { 
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0); 
+        -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0); 
+    }
+}
+
+// .gamesListEven
+@include keyframes(gamesListEven){
+    from {
+        visibility: hidden;
+        @include transform(perspective(1px) translateX(-100%) skew(-6deg));
+    }
+    to{
+        visibility: visible;
+        @include transform(perspective(1px) translateX(0) skew(-6deg));
+    }
+}
+
+// .gamesListOdd
+@include keyframes(gamesListOdd){
+    from {
+        visibility: hidden;
+        @include transform(perspective(1px) translateX(100%) skew(-6deg));
+    }
+    to{
+        visibility: visible;
+        @include transform(perspective(1px) translateX(0) skew(-6deg));
+    }
+}
+
+
+// .keyPointEven
+@include keyframes(keyPointEven){
+    from {
+        visibility: hidden;
+        @include transform(perspective(1px) translateX(-100%));
+    }
+    to{
+        visibility: visible;
+        @include transform(perspective(1px) translateX(0));
+    }
+}
+
+// .keyPointOdd
+@include keyframes(keyPointOdd){
+    from {
+        visibility: hidden;
+        @include transform(perspective(1px) translateX(100%));
+    }
+    to{
+        visibility: visible;
+        @include transform(perspective(1px) translateX(0));
+    }
+}

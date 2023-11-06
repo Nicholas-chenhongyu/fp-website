@@ -1,0 +1,90 @@
+{
+    "key": "group_60dd9b404fdd8",
+    "title": "Clone - Banner Heading",
+    "fields": [
+        {
+            "key": "field_60dd9b4ae5110",
+            "label": "Heading 1",
+            "name": "banner_heading_1",
+            "type": "text",
+            "instructions": "This heading will be on the first line.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60dd9b5de5111",
+            "label": "Heading 2",
+            "name": "banner_heading_2",
+            "type": "text",
+            "instructions": "This heading will be on the second line, and slightly bigger.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60dee9145da4c",
+            "label": "Heading Color",
+            "name": "banner_heading_color",
+            "type": "select",
+            "instructions": "<ul>\r\n<li><strong>Orange Bottom:<\/strong> White text, bottom line orange.<\/li>\r\n<li><strong>Orange Top:<\/strong> White text, top line orange.<\/li>\r\n<li><strong>Black Bottom:<\/strong> White text, top line black.<\/li>\r\n<li><strong>Black Top:<\/strong> White text, top line black.<\/li>\r\n<li><strong>White:<\/strong> All white text.<\/li>\r\n<\/ul>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "orange_bottom": "Orange Bottom",
+                "orange_top": "Orange Top",
+                "black_bottom": "Black Bottom",
+                "black_top": "Black Top",
+                "white": "White"
+            },
+            "default_value": "orange_bottom",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": ""
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1627303907
+}

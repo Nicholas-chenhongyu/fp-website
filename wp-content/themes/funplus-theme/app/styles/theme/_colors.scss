@@ -1,0 +1,8 @@
+@each $name, $hex in $colors {
+  .text-#{$name} {
+    color: #{$hex} !important;
+  }
+  .bg-#{$name} {
+    background-color: #{$hex} !important;
+  }
+}

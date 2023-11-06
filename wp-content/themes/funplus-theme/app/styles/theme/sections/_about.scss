@@ -1,0 +1,94 @@
+.about{
+    &.section.section-spacing:not(.hero) {
+        margin-bottom: 100px !important;
+
+        @include media-breakpoint-up-width(md){
+            margin-bottom: 150px !important;
+        }
+    }
+
+    .heading .heading-prefix {
+        @include media-breakpoint-up-width(lg){
+            &__prefix {
+                margin-left:-10px;
+            }
+        }
+    }
+    
+    position: relative;
+    padding: 0;
+    // margin: 60px 0 100px;
+
+    &::before{
+        display: none;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -64px;
+        z-index: -1;
+        height: 100%;
+        background-color: rgba($grey, 0.4);
+        @include borderRadius(32px);
+    }
+    @include media-breakpoint-up-width(lg){
+        padding: 48px 0 86px;
+
+        &::before{
+            display: block;
+            width: calc(59% + 64px);
+        }
+    }
+    &__text{
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+
+        margin-right:30px;
+        p:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__button{
+        margin-top: 56px;
+    }
+    &__featured-image {
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        height:100%;
+        width: 200%;
+
+        object-fit:contain;
+       
+        @include transform(translateX(-20%));
+
+        @include media-breakpoint-up-width(lg){
+            width: calc(100% + 100px);
+            height: auto;
+            @include transform(translateX(0px));
+        }
+    }
+
+    &__featured-images{
+        position:relative;
+        padding-top:200%;
+
+        @include media-breakpoint-up-width(md){
+        padding-top:100%;
+        }
+    }
+
+    // Animations
+    &__text.fadeIn{
+        @include animationDelay(1.4s);
+        @include animationDuration(.6s);
+    }
+    &__button.uncoverFromLeft{
+        @include animationDelay(1.5s);
+        @include animationDuration(.6s);
+    }
+    .featured.fadeIn{
+        @include animationDuration(.6s);
+    }
+}

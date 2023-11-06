@@ -1,0 +1,112 @@
+main,
+main.content-wrapper{
+    overflow-x: clip;
+    overflow-x: hidden;
+}
+.main-content{
+    position: relative;
+
+    // Objects
+    .pill-left,
+    .pill-right,
+    .cross{
+        display: none;
+
+        @include media-breakpoint-up-width(lg){
+            display: block;
+        }
+    }
+    .pill-right{
+        position: absolute;
+        top: 60px;
+        right: -100px;
+        height: 400px;
+        width: 160px;
+        background-color: $orange-alt;
+        opacity: 0.2;
+        @include transform(rotate(40deg));
+        @include borderRadius(160px);
+    }
+    .pill-left{
+        position: absolute;
+        bottom: 120px;
+        left: 160px;
+        height: 200px;
+        width: 60px;
+        background-color: $orange;
+        opacity: 0.2;
+        @include transform(rotate(40deg));
+        @include borderRadius(160px);
+    }
+    .cross{
+        position: absolute;
+        bottom: 40px;
+        left: 110px;
+        opacity: 0.2;
+        height: 40px;
+        width: 40px;
+        @include transform(rotate(-20deg));
+
+        &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 40px;
+            width: 14px;
+            background-color: $orange-alt;
+            @include borderRadius(14px);
+            @include transform(translateX(-50%));
+        }
+        &::after{
+            @include transform(translateX(-50%) rotate(90deg));
+        }
+    }
+
+    // Content
+    h1, h2, h3, h4, h5, h6{
+        color: $orange;
+        margin-bottom: 18px;
+
+        &:not(:first-child){
+            margin-top: 60px;
+        }
+    }
+    h2{
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+        letter-spacing: 3.35px;
+    }
+    ul,
+    ol{
+        padding-left: 20px;
+
+        li{
+            margin-bottom: 18px;
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    // a {
+    //     color: $orange;
+    //     &:hover {
+    //         text-decoration: underline
+    //     }
+    // }
+    @include media-breakpoint-up-width(lg){
+        ul li,
+        ol li{
+            margin-bottom: 4px;
+        }
+    }
+    table, tr, td {
+        border: 1px solid #ff5a00;
+        padding: 10px;
+    }
+}
+.language-container + .sections table {
+    width: 100%;
+}

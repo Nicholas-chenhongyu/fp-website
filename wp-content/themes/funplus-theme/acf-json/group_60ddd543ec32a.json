@@ -1,0 +1,261 @@
+{
+    "key": "group_60ddd543ec32a",
+    "title": "Clone - Banner Background",
+    "fields": [
+        {
+            "key": "field_60ddd54f88304",
+            "label": "Background Type",
+            "name": "banner_bg_type",
+            "type": "select",
+            "instructions": "Select a banner background type.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image": "Image",
+                "video": "Video",
+                "solid": "Color"
+            },
+            "default_value": "solid",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_60ddd5a488305",
+            "label": "Background Image",
+            "name": "banner_bg_image",
+            "type": "group",
+            "instructions": "Upload a background image here.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60ddd54f88304",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_60ddd5cc88306",
+                    "label": "Background Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_60deecd0e35c0",
+                    "label": "Opacity",
+                    "name": "opacity",
+                    "type": "select",
+                    "instructions": "Set opacity on the background image.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "0.1": "10%",
+                        "0.2": "20%",
+                        "0.3": "30%",
+                        "0.4": "40%",
+                        "0.5": "50%",
+                        "0.6": "60%",
+                        "0.7": "70%",
+                        "0.8": "80%",
+                        "0.9": "90%",
+                        "1": "100%"
+                    },
+                    "default_value": "0.3",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_60ddd5f188308",
+            "label": "Background Video",
+            "name": "banner_bg_video",
+            "type": "group",
+            "instructions": "Add your video files here.\r\nWhere possible use WebM format. You can use an online converter to generate this such as <a href=\"https:\/\/cloudconvert.com\/mp4-to-webm\">https:\/\/cloudconvert.com\/mp4-to-webm<\/a>\r\nIf you use WebM format you must include an mp4 version for browser compatibility.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60ddd54f88304",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_60ddd61388309",
+                    "label": "WebM",
+                    "name": "webm",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ".webm"
+                },
+                {
+                    "key": "field_60ddd64e8830a",
+                    "label": "MP4",
+                    "name": "mp4",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ".mp4"
+                },
+                {
+                    "key": "field_60deed82e35c1",
+                    "label": "Opacity",
+                    "name": "opacity",
+                    "type": "select",
+                    "instructions": "Set opacity on the background image.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "0.1": "10%",
+                        "0.2": "20%",
+                        "0.3": "30%",
+                        "0.4": "40%",
+                        "0.5": "50%",
+                        "0.6": "60%",
+                        "0.7": "70%",
+                        "0.8": "80%",
+                        "0.9": "90%",
+                        "1": "100%"
+                    },
+                    "default_value": "0.6",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_60deec5f23eee",
+            "label": "Background Color",
+            "name": "banner_bg_color",
+            "type": "select",
+            "instructions": "Select a background color.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60ddd54f88304",
+                        "operator": "==",
+                        "value": "solid"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "orange": "Orange",
+                "black": "Black"
+            },
+            "default_value": "orange",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": ""
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1631542897
+}

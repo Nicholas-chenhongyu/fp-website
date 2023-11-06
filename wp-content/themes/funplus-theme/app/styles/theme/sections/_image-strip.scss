@@ -1,0 +1,28 @@
+.image-strip{
+    display: flex;
+    width: calc(100% + 60px);
+    flex-wrap: wrap;
+    @include transform(translateX(-30px));
+
+    &__image{
+        max-width: 50%;
+        overflow: hidden;
+        @include transform(skew(-6deg));
+        margin-right:-1px;
+
+        img{
+            max-width: calc(100% + 90px);
+            height: 190px;
+            object-position: center;
+            object-fit: cover;
+            @include transform(skew(6deg) translateX(-20px));
+        }
+        @include media-breakpoint-up-width(md){
+            max-width: 25%;
+
+            img{
+                height: 255px;
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+$cubic: cubic-bezier(0.65, 0, 0.35, 1);
+
+// Animations should only work if they're nested inside a .wow class
+.wow{
+    .fadeInUpwards,
+    .fadeIn,
+    .fadeZoomOut,
+    .fadeZoomIn,
+    .swiperSlideFade,
+    .squeezeInBounce{
+        opacity: 0;
+    }
+    .slideUp{
+        @include transform(translateY(100px));
+    }
+    .swiperSlideFade{
+        visibility: hidden;
+        @include transform(translateX(100%));
+    }
+    .zoomIn{
+        @include transform(perspective(1px) scale(1));
+    }
+    
+    .gamesListEven{
+        visibility: visible;
+        @include transform(perspective(1px) translateX(-100%));
+    }
+    .gamesListOdd{
+        visibility: visible;
+        @include transform(perspective(1px) translateX(100%));
+    }
+}
+
+.animated{
+    .fadeInUpwards{
+        @include animation(fadeInUpwards 1s $cubic forwards);
+    }
+    .fadeInUpwardsSm{
+        @include animation(fadeInUpwardsSm 1s $cubic forwards);
+    }
+    &.fadeInUpSkew {
+        opacity:0;
+        @include animation(fadeInUpSkew 0.75s ease-in-out forwards);
+    }
+    .fadeIn{
+        opacity: 0;
+        @include animation(fadeIn2 1s $cubic forwards);
+    }
+    .fadeZoomOut{
+        @include transform(perspective(1px) scale(1));
+        @include animation(fadeZoomOut 1s $cubic forwards);
+    }
+    .fadeZoomIn{
+        @include transform(perspective(1px) scale(1));
+        @include animation(fadeZoomIn 1s $cubic forwards);
+    }
+    .zoomIn{
+        @include transform(perspective(1px) scale(1));
+        @include animation(zoomIn 1s $cubic forwards);
+    }
+    .uncoverFromLeft{
+        clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
+        -webkit-clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
+        @include animation(uncoverFromLeft 1s $cubic forwards);
+    }
+    .uncoverFromBottom{
+        clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
+        -webkit-clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
+        @include animation(uncoverFromBottom 1s $cubic forwards);
+    }
+    .squeezeIn{
+        @include transform(perspective(1px) scale(.7));
+        @include animation(squeezeIn 1s $cubic forwards);
+    }
+    .squeezeInBounce{
+        @include transform(perspective(1px) scale(.7));
+        @include animation(squeezeInBounce 1s $cubic forwards);
+    }
+    .slideUp{
+        @include transform(perspective(1px) translateY(0));
+        @include animation(slideUp 1s $cubic forwards);
+    }
+    .swiperSlideFade{
+        visibility: visible;
+        @include transform(perspective(1px) translateX(0));
+        @include animation(swiperSlideFade 1s $cubic forwards);
+    }
+    .uncoverBannerBg{
+        clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
+        -webkit-clip-path: polygon(0 100%, 0 100%, 0 0, 0 0);
+        @include animation(uncoverBannerBg 1s $cubic forwards);
+    }
+    .gamesListEven{
+        visibility: visible;
+        @include transform(perspective(1px) translateX(0) skew(-6deg));
+        @include animation(gamesListEven 1s $cubic forwards);
+    }
+    .gamesListOdd{
+        visibility: visible;
+        @include transform(perspective(1px) translateX(0) skew(-6deg));
+        @include animation(gamesListOdd 1s $cubic forwards);
+    }
+
+    .keyPointEven{
+        visibility: visible;
+        @include transform(perspective(1px) translateX(0));
+        @include animation(keyPointEven 1s $cubic forwards);
+    }
+    .keyPointOdd{
+        visibility: visible;
+        @include transform(perspective(1px) translateX(0));
+        @include animation(keyPointOdd 1s $cubic forwards);
+    }
+}

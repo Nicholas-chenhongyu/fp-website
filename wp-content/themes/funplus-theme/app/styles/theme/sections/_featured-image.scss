@@ -1,0 +1,244 @@
+.featured-image{
+    padding: 60px 0;
+
+    @include media-breakpoint-up-width(lg){
+        padding: 90px 0;
+    }
+    &:not(.no-section-spacing){
+        padding-bottom: 0;
+    }
+    &__text p:last-child{
+            margin-bottom: 0;
+    }
+    &__button{
+        margin-top: 40px;
+
+        @include media-breakpoint-up-width(lg){
+            margin-top: 56px;
+        }
+    }
+    &__image{
+        margin-top: 60px;
+        position: relative;
+        z-index: 1;
+
+        .shape-inner-cross-wrapper{
+            height: 46.25px;
+            width: 46.25px;
+            position:absolute;
+            top: 71%;
+            right: 6.88%;
+            left: auto;
+            opacity:0;
+            @include animationDelay(1.2s)
+
+        }
+
+        .shape-outer-cross-wrapper{
+            height: 24px;
+            width: 24px;
+            position:absolute;
+            top: 41.37%;
+            left: -5px;
+            z-index:1;
+            opacity:0;
+
+            @include animationDelay(1.4s)
+        }
+
+        .shape-inner-pill-wrapper{
+            position:absolute;
+            height: 122px;
+            width: 297px;
+            bottom: -20px;
+            left: -30px;
+            opacity:0;
+            @include animationDelay(1.5s)
+
+        }
+
+        .shape-inner-circle-wrapper {
+            position:absolute;
+            height: 24px;
+            width: 24px;
+            opacity:0;
+            &.shape-inner-circle-top{
+                top: 5.96%;
+                right: calc(76px + 5%);
+                @include animationDelay(1.6s)
+            }
+
+            &.shape-inner-circle-bottom{
+                bottom: 15.32%;
+                left: 1%;
+                @include animationDelay(1.5s)
+            }
+        }
+
+        @include media-breakpoint-up-width(md){
+            .shape-inner-cross-wrapper {
+                right: 42.88%;   
+            }
+
+            .shape-inner-circle-wrapper.shape-inner-circle-top{
+                right: 40%;
+            }
+        }
+
+        @include media-breakpoint-up-width(lg){
+            .shape-inner-cross-wrapper {
+                right: 6.88%; 
+            }
+
+            .shape-outer-cross-wrapper{ 
+                top: 41.37%;
+                left: -10px;
+                height: 46.25px;
+                width: 46.25px;
+
+            }
+            .shape-inner-pill-wrapper{
+                width: 184px;
+                height: 444px;
+                left: calc(10.33% + 76px);
+                bottom: -18.37%;
+            }
+
+            .shape-inner-circle-wrapper {
+                height: 36px;
+                width: 36px;    
+            }
+        }
+
+        .shape{
+            // display: none;
+            position: absolute;
+            z-index: 2;
+
+            &.shape-outer-cross,
+            &.shape-inner-cross{
+                height: 46.25px;
+                width: 46.25px;
+
+                &::before,
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    height: 100%;
+                    width: 15px;
+                    background-color: $orange-alt;
+                    @include borderRadius(15px);
+                    @include transform(translateY(-50%));
+                }
+                &::after{
+                    @include transform(translateY(-50%) rotate(-90deg));
+                }
+            }
+            &.shape-outer-cross{
+                height: 24px;
+                width: 24px;
+                @include transform(matrix(0.87, -0.49, 0.49, 0.87, 0, 0));
+
+                &::before,
+                &::after{
+                    width: 8px;
+                }
+            }
+            &.shape-inner-cross {
+                height: 46.25px;
+                width: 46.25px;
+                @include transform(skew(0deg) rotate(-29.37deg));
+
+            }
+            &.shape-inner-circle{
+                height: 24px;
+                width: 24px;
+                background-color: $white;
+                @include borderRadius(100%);
+                @include transform(skew(0deg));
+            }
+            &.shape-inner-pill{
+                background-color: $orange;
+                height: 122px;
+                width: 297px;
+                @include borderRadius(184px);
+                @include transform(skew(0deg) rotate(121deg));
+            }
+            @include media-breakpoint-up-width(lg){
+                
+                &.shape-outer-cross,
+                &.shape-inner-cross{
+                    height: 46.25px;
+                    width: 46.25px;
+                }
+                &.shape-outer-cross{
+
+                    &::before,
+                    &::after{
+                        width: 15px;
+                    }
+                }
+                &.shape-inner-cross{
+                    @include transform(skew(8deg) rotate(-29.37deg));
+                }
+                &.shape-inner-pill{
+                    width: 184px;
+                    height: 444px;
+                    @include transform(skew(8deg) rotate(37.54deg));
+                }
+                &.shape-inner-circle{
+                    height: 36px;
+                    width: 36px;
+                    @include transform(skew(8deg));
+                }
+            }
+        }
+        &__inner{
+            position: relative;
+            height: 470px;
+            width: 100%;
+            overflow: hidden;
+            @include transform(skew(0deg));
+            @include borderRadius(20px);
+            .featured-image__image__inner__image {
+
+                height:100%;
+                @include animationDelay(1.2s);
+                // @include animationDuration(0.6s)
+            }
+            img{
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: auto;
+                height: 100%;
+                @include transform(skew(0deg));
+                @include borderRadius(20px);
+            }
+        }
+        @include media-breakpoint-up-width(lg){
+            margin-top: 0;
+
+            .shape{
+                display: block;
+            }
+            &__inner{
+                height: 605px;
+                overflow: hidden;
+                @include transform(skew(-8deg));
+
+                img{
+                    position: absolute;
+                    top: 0;
+                    width: auto;
+                    height: 100%;
+                    left: -40px;
+                    @include transform(skew(8deg));
+                }
+            }
+        }
+    }
+}

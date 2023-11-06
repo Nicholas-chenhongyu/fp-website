@@ -1,0 +1,200 @@
+.employee{
+    padding: 66px 0 76px;
+    background-color: $black;
+    position: relative;
+    color: $white;
+
+    .row.justify-content-between{
+        flex-direction: row !important;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        background-color: $orange;
+        left: auto;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 16%;
+
+        @include media-breakpoint-up-width(sm){
+            width: 20%;
+        }
+        @include media-breakpoint-up-width(md){
+            width: 38%;
+        }
+    }
+    &__content{
+        position: relative;
+        z-index: 2;
+    }
+    &__shapes{
+        display: none;
+
+        @include media-breakpoint-up-width(lg){
+            display: block;
+        }
+        &__circle-sm,
+        &__circle-lg,
+        &__cross,
+        &__pill{
+            position: absolute;
+            border: 4.5px solid $white;
+        }
+        &__circle-sm,
+        &__circle-lg{
+            height: 28px;
+            width: 28px;
+            @include borderRadius(100%);
+        }
+        &__circle-sm{
+            right: 244px;
+            bottom: -20px;
+            @include animationDelay(.9s !important);
+        }
+        &__circle-lg{
+            height: 71px;
+            width: 71px;
+            bottom: 140px;
+            right: -60px;
+            z-index: 2;
+            @include animationDelay(1.2s !important);
+        }
+        &__pill{
+            height: 54px;
+            width: 170px;
+            bottom: -113px;
+            right: 74px;
+            @include borderRadius(54px);
+            @include animationDelay(1s !important);
+        }
+        &__cross{
+            border: none;
+            height: 154px;
+            width: 154px;
+            background-image: url("data:image/svg+xml,%3Csvg width='156' height='155' viewBox='0 0 156 155' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='path-1-inside-1' fill='white'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M155.58 77.6417C155.58 92.7893 143.3 105.069 128.152 105.069L105.648 105.069L105.648 127.573C105.648 142.72 93.3689 155 78.2213 155C63.0736 155 50.7941 142.72 50.7941 127.573L50.7941 105.069L28.2893 105.069C13.1417 105.069 0.862107 92.7893 0.862107 77.6417C0.862107 62.4941 13.1417 50.2145 28.2893 50.2145L50.7941 50.2145L50.7941 27.7097C50.7941 12.5621 63.0736 0.282515 78.2213 0.282516C93.3689 0.282516 105.648 12.5621 105.648 27.7097L105.648 50.2145L128.152 50.2145C143.3 50.2145 155.58 62.4941 155.58 77.6417Z'/%3E%3C/mask%3E%3Cpath d='M105.648 105.069L100.726 105.069L100.726 100.146L105.648 100.146L105.648 105.069ZM105.648 127.573L100.726 127.573L105.648 127.573ZM50.7941 127.573L45.8712 127.573L50.7941 127.573ZM50.7941 105.069L50.7941 100.146L55.7169 100.146L55.7169 105.069L50.7941 105.069ZM50.7941 50.2145L55.7169 50.2145L55.7169 55.1374L50.7941 55.1374L50.7941 50.2145ZM50.7941 27.7097L55.7169 27.7097L50.7941 27.7097ZM105.648 27.7097L100.726 27.7097L105.648 27.7097ZM105.648 50.2145L105.648 55.1374L100.726 55.1374L100.726 50.2145L105.648 50.2145ZM128.152 100.146C140.581 100.146 150.657 90.0705 150.657 77.6417L160.502 77.6417C160.502 95.5081 146.019 109.992 128.152 109.992L128.152 100.146ZM105.648 100.146L128.152 100.146L128.152 109.992L105.648 109.992L105.648 100.146ZM100.726 127.573L100.726 105.069L110.571 105.069L110.571 127.573L100.726 127.573ZM78.2213 150.077C90.6501 150.077 100.726 140.002 100.726 127.573L110.571 127.573C110.571 145.439 96.0877 159.923 78.2213 159.923L78.2213 150.077ZM55.7169 127.573C55.7169 140.002 65.7925 150.077 78.2213 150.077L78.2213 159.923C60.3548 159.923 45.8712 145.439 45.8712 127.573L55.7169 127.573ZM55.7169 105.069L55.7169 127.573L45.8712 127.573L45.8712 105.069L55.7169 105.069ZM28.2893 100.146L50.7941 100.146L50.7941 109.992L28.2893 109.992L28.2893 100.146ZM5.78494 77.6417C5.78494 90.0705 15.8605 100.146 28.2893 100.146L28.2893 109.992C10.4229 109.992 -4.06073 95.5081 -4.06073 77.6417L5.78494 77.6417ZM28.2893 55.1374C15.8605 55.1374 5.78494 65.2129 5.78494 77.6417L-4.06073 77.6417C-4.06073 59.7753 10.4229 45.2917 28.2893 45.2917L28.2893 55.1374ZM50.7941 55.1374L28.2893 55.1374L28.2893 45.2917L50.7941 45.2917L50.7941 55.1374ZM55.7169 27.7097L55.7169 50.2145L45.8712 50.2145L45.8712 27.7097L55.7169 27.7097ZM78.2213 5.20535C65.7925 5.20535 55.7169 15.2809 55.7169 27.7097L45.8712 27.7097C45.8712 9.84328 60.3548 -4.64032 78.2213 -4.64032L78.2213 5.20535ZM100.726 27.7097C100.726 15.2809 90.6501 5.20535 78.2213 5.20535L78.2213 -4.64032C96.0877 -4.64032 110.571 9.84332 110.571 27.7097L100.726 27.7097ZM100.726 50.2145L100.726 27.7097L110.571 27.7097L110.571 50.2145L100.726 50.2145ZM128.152 55.1374L105.648 55.1374L105.648 45.2917L128.152 45.2917L128.152 55.1374ZM150.657 77.6417C150.657 65.2129 140.581 55.1374 128.152 55.1374L128.152 45.2917C146.019 45.2917 160.502 59.7753 160.502 77.6417L150.657 77.6417Z' fill='white' mask='url(%23path-1-inside-1)'/%3E%3C/svg%3E%0A");
+            background-size: 154px;
+            bottom: -118px;
+            right: -114px;
+            @include animationDelay(.9s !important);
+        }
+    }
+    &__name{
+        position: relative;
+        font-size: 2.7rem;
+        line-height: 2.7rem;
+        letter-spacing: 4px;
+        margin-bottom: 18px;
+        padding-left: 23px;
+        @include animationDelay(1.1s !important);
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background-color: $orange;
+        }
+        span{
+            color: $orange;
+        }
+        @include media-breakpoint-up-width(lg){
+            font-size: 4rem;
+            line-height: 4rem;
+            letter-spacing: 5.1px;
+            margin-bottom: 40px;
+            padding-left: 35px;
+        }
+        @include media-breakpoint-up-width(lg){
+            font-size: 5rem;
+            line-height: 5rem;
+            letter-spacing: 9.1px;
+        }
+    }
+    &__description{
+        @include animationDelay(1.3s !important);
+    }
+    .btn{
+        margin-top: 36px;
+    }
+    .uncoverFromLeft{
+        @include animationDelay(1.5s !important);
+    }
+    &__image{
+        position: absolute;
+        height: 433px;
+        width: 100%;
+        right: -27px;
+        bottom: -76px;
+        z-index: 1;
+
+        &__background{
+            display: none;
+            overflow: hidden;
+            position: relative;
+            background-color: $black;
+            height: 480px;
+            width: 100%;
+            @include transform(skew(-8deg));
+            @include borderRadius(20px);
+            @include animationDelay(.2s !important);
+
+            img{
+                position: absolute;
+                top: 0;
+                left: -40px;
+                height: 100%;
+                width: 100%;
+                @include transform(skew(8deg));
+                @include borderRadius(20px);
+            }
+        }
+        &__employee{
+            position: relative;
+            left: calc(50% - 20px);
+            bottom: auto;
+            height: 100%;
+            width: auto;
+            z-index: 1;
+            @include transform(translateX(-50%));
+            @include animationDelay(.5s !important);
+        }
+    }
+    @include media-breakpoint-up-width(lg){
+        padding: 103px 0 86px;
+
+        .row.justify-content-between{
+            flex-direction: row-reverse !important;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: auto;
+            height: 100%;
+            width: 31%;
+            background-color: $orange;
+        }
+        &__image{
+            position: relative;
+            height: 480px;
+            bottom: auto;
+
+            &__background{
+                display: block;
+            }
+            &__employee{
+                position: absolute;
+                left: calc(50% - 20px);
+                bottom: 0;
+                height: calc(100% + 90px);
+                width: auto;
+                z-index: 1;
+                @include transform(translateX(-50%));
+            }
+        }
+    }
+}

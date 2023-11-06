@@ -1,0 +1,322 @@
+{
+    "key": "group_60fa7af8ecbbf",
+    "title": "Clone - Banner Shapes",
+    "fields": [
+        {
+            "key": "field_60fa7b131ff93",
+            "label": "Shapes",
+            "name": "shapes",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_60fa7b1ba10fe": {
+                    "key": "layout_60fa7b1ba10fe",
+                    "name": "pill_large",
+                    "label": "Pill Large",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fa941f6c7df",
+                            "label": "Order",
+                            "name": "order",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 0,
+                            "max": 10,
+                            "step": "0.1"
+                        }
+                    ],
+                    "min": "0",
+                    "max": "1"
+                },
+                "layout_60fa7b481ff94": {
+                    "key": "layout_60fa7b481ff94",
+                    "name": "pill",
+                    "label": "Pill",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fa94356c7e0",
+                            "label": "Order",
+                            "name": "order",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 0,
+                            "max": 10,
+                            "step": "0.1"
+                        }
+                    ],
+                    "min": "0",
+                    "max": "1"
+                },
+                "layout_60fa7b891ff95": {
+                    "key": "layout_60fa7b891ff95",
+                    "name": "pill_small",
+                    "label": "Pill Small",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fa94406c7e1",
+                            "label": "Order",
+                            "name": "order",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 0,
+                            "max": 10,
+                            "step": "0.1"
+                        }
+                    ],
+                    "min": "0",
+                    "max": "1"
+                },
+                "layout_60fa8dc2c8e33": {
+                    "key": "layout_60fa8dc2c8e33",
+                    "name": "pill_outline",
+                    "label": "Pill Outline",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fa94546c7e2",
+                            "label": "Order",
+                            "name": "order",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 0,
+                            "max": 10,
+                            "step": "0.1"
+                        }
+                    ],
+                    "min": "0",
+                    "max": "1"
+                },
+                "layout_60fa7b961ff96": {
+                    "key": "layout_60fa7b961ff96",
+                    "name": "cross",
+                    "label": "Cross",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fa94616c7e3",
+                            "label": "Order",
+                            "name": "order",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 0,
+                            "max": 10,
+                            "step": "0.1"
+                        }
+                    ],
+                    "min": "0",
+                    "max": "1"
+                },
+                "layout_60fa7bae1ff97": {
+                    "key": "layout_60fa7bae1ff97",
+                    "name": "cross_small",
+                    "label": "Cross Small",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fa946f6c7e4",
+                            "label": "Order",
+                            "name": "order",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 0,
+                            "max": 10,
+                            "step": "0.1"
+                        }
+                    ],
+                    "min": "0",
+                    "max": "1"
+                },
+                "layout_60fa7bb61ff98": {
+                    "key": "layout_60fa7bb61ff98",
+                    "name": "circle_top",
+                    "label": "Circle Top",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fa94806c7e5",
+                            "label": "Order",
+                            "name": "order",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 0,
+                            "max": 10,
+                            "step": "0.1"
+                        }
+                    ],
+                    "min": "0",
+                    "max": "1"
+                },
+                "layout_60fa8dccc8e34": {
+                    "key": "layout_60fa8dccc8e34",
+                    "name": "circle_middle",
+                    "label": "Circle Middle",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fa949e6c7e6",
+                            "label": "Order",
+                            "name": "order",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 0,
+                            "max": 10,
+                            "step": "0.1"
+                        }
+                    ],
+                    "min": "0",
+                    "max": "1"
+                },
+                "layout_60fa7bca1ff99": {
+                    "key": "layout_60fa7bca1ff99",
+                    "name": "circle_bottom",
+                    "label": "Circle Bottom",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60fa94c26c7e7",
+                            "label": "Order",
+                            "name": "order",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 0,
+                            "max": 10,
+                            "step": ""
+                        }
+                    ],
+                    "min": "0",
+                    "max": "1"
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": ""
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1627038081
+}

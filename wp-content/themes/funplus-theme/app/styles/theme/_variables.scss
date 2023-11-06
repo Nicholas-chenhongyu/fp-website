@@ -1,0 +1,34 @@
+// Fonts
+$font-d-din-bold: 'D-DIN-Bold', sans-serif;
+$font-d-din-bold-condensed: 'D-DIN-Bold-Condensed', sans-serif;
+$font-d-din-bold-exp: 'D-DIN-Bold-Exp', sans-serif;
+$font-d-din-normal: 'D-DIN-Normal', sans-serif;
+$font-d-din-normal-exp: 'D-DIN-Normal-Exp', sans-serif;
+$font-d-din-normal-condensed: 'D-DIN-Normal-Condensed', sans-serif;
+
+// Colours
+$white:             #fff;
+$grey:              #D8D8D8;
+$grey-alt:          #979797;
+$grey-alt2:         #292929;
+$grey-alt3:         #77838F;
+$black:             #000000;
+$orange:            #FF5A00;
+$orange-alt:        #FF9800;
+$orange-alt2:       #FF9C36;
+
+// Validation
+$invalid: #D50000;
+$valid: $orange;
+
+// for color loops...
+$colors: (
+  'white': $white,
+  'black': $black,
+  'grey': $grey,
+  'orange': $orange,
+);
+
+.rtl * {
+  text-align: right;
+}

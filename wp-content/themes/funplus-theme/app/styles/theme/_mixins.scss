@@ -1,0 +1,202 @@
+// transition
+@mixin transition ($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+@mixin transitionDuration ($duration) {
+  -webkit-transition-duration: $duration;
+  -moz-transition-duration: $duration;
+  -o-transition-duration: $duration;
+  transition-duration: $duration;
+}
+@mixin transitionDelay ($delay) {
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  animation-delay: $delay;
+}
+
+// transform
+@mixin transform ($transforms...) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  -o-transform: $transforms;
+  transform: $transforms;
+}
+@mixin transformOrigin ($origin) {
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+// animation
+@mixin animation ($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+@mixin animationDelay ($delay) {
+  -webkit-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -o-animation-delay: $delay;
+  animation-delay: $delay;
+}
+@mixin animationFillMode ($fillmode) {
+  -webkit-animation-fill-mode: $fillmode;
+  -moz-animation-fill-mode: $fillmode;
+  -o-animation-fill-mode: $fillmode;
+  animation-fill-mode: $fillmode;
+}
+@mixin animationDuration($duration){
+    animation-duration: $duration;
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -o-animation-duration: $duration;
+}
+@mixin animate ($animation, $delay, $duration, $direction, $iteration) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: $direction;
+  -webkit-animation-iteration-count: $iteration;
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: $direction;
+  -moz-animation-iteration-count: $iteration;
+
+  -o-animation-delay: $delay;
+  -o-animation-duration: $duration;
+  -o-animation-name: $animation;
+  -o-animation-fill-mode: $direction;
+  -o-animation-iteration-count: $iteration;
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $animation;
+  animation-fill-mode: $direction;
+  animation-iteration-count: $iteration;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content; 
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    } 
+}
+
+// helpers
+@mixin borderRadius ($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin backgroundImage ($size) {
+  background-size: $size;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+@mixin boxShadow ($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+@mixin alignItems ($align) {
+  -webkit-box-align: $align;
+  -ms-flex-align: $align;
+  align-items: $align;
+}
+@mixin userSelect ($select) {
+  -webkit-user-select: $select;
+  -moz-user-select: $select;
+  -ms-user-select: $select;
+  user-select: $select;
+}
+@mixin appearance ($appearance) {
+  -webkit-appearance: $appearance;
+  -moz-appearance: $appearance;
+  appearance: $appearance;
+}
+
+// breakpoints WIDTH
+@mixin media-breakpoint-up-width ($size) {
+  @if $size == sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+  @else if $size == md {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+  @else if $size == lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+  @else if $size == xl {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+  @else if $size == fullwidth {
+    @media (min-width: 100%) {
+      @content;
+    }
+  }
+  @else {
+    @media (min-width: $size) {
+      @content;
+    }
+  }
+}
+
+// breakpoints HEIGHT
+@mixin media-breakpoint-up-height ($size) {
+  @if $size == sm {
+    @media (min-height: 360px) {
+      @content;
+    }
+  }
+  @else if $size == md {
+    @media (min-height: 480px) {
+      @content;
+    }
+  }
+  @else if $size == lg {
+    @media (min-height: 720px) {
+      @content;
+    }
+  }
+  @else if $size == xl {
+    @media (min-height: 880px) {
+      @content;
+    }
+  }
+  @else if $size == xxl {
+    @media (min-height: 1080px) {
+      @content;
+    }
+  }
+  @else {
+    @media (min-height: $size) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+/*
+* xskeleton
+* Author: Heaven Media
+*/
+
+// Setup
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "keyframes";
+@import "animations";
+@import "typography";
+@import "colors";
+
+// Structure
+@import "structure/general";
+@import "structure/buttons";
+@import "structure/forms";
+@import "structure/skew";
+@import "structure/social";
+@import "structure/language-select";
+
+// Page
+@import "page/loader";
+@import "page/header";
+@import "page/banner";
+@import "page/posts";
+@import "page/footer";
+
+// Sections
+@import "sections/heading";
+@import "sections/subheading";
+@import "sections/about";
+@import "sections/games";
+@import "sections/content";
+@import "sections/image-strip";
+@import "sections/slider";
+@import "sections/news-slider";
+@import "sections/statistics";
+@import "sections/video";
+@import "sections/facts";
+@import "sections/world-map";
+@import "sections/cards";
+@import "sections/key-points";
+@import "sections/support";
+@import "sections/social";
+@import "sections/services";
+@import "sections/employee";
+@import "sections/faqs";
+@import "sections/contact";
+@import "sections/featured-image";
+@import "sections/timeline";
+@import "sections/management";
+@import "sections/career";
+@import "sections/cookie";

@@ -1,0 +1,15 @@
+{
+  "name": "xskeleton-theme",
+  "authors": [
+    "Heaven Media"
+  ],
+  "license": "MIT",
+  "private": "true",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

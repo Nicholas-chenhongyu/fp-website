@@ -1,0 +1,56 @@
+.management{
+    .subheading{
+        margin-bottom: 76px;
+    }
+    .hidden {
+        display: none;
+    }
+    .text-center {
+        button {
+            padding-bottom: 50px;
+        }
+    }
+    .member-image {
+        height: 254px;
+        width: 100%;
+        margin-bottom: 30px;
+        background-size: cover;
+        position: relative;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        border-radius: 16px;
+        .member-inner {
+            position: absolute;
+            width: 100%;
+            bottom: 5px;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            .member-intro {
+                color: $orange;
+                max-width: 60%;
+                h4 {
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+            }
+            .member-profile {
+                position: absolute;
+                right: 10px;
+                bottom: 20px;
+                .btn {
+                    transform: scale(0.8);
+                    transform-origin: right bottom;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .page-1448 .banner__main__feature, .page-2322 .banner__main__feature, .page-2367 .banner__main__feature {
+        right: -100px;
+    }
+    .page-1448 .banner__main__content, .page-2322 .banner__main__content, .page-2367 .banner__main__content {
+        z-index: 3;
+    }
+}

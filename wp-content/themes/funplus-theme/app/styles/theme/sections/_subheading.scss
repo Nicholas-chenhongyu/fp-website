@@ -1,0 +1,38 @@
+.subheading-block{
+    position: relative;
+    z-index: 2 !important;
+    padding: 44px 0;
+
+    .subheading{
+        margin-bottom: 0;
+    }
+    &.subheading-block-bg{
+        padding: 44px 0;
+
+        &::before{
+            display: none;
+            content: '';
+            width: calc(100% - (146px - 32px));
+            height: 600px;
+            background-color: rgba($grey, 0.4);
+            position: absolute;
+            z-index: -1;
+            right: -32px;
+            top: 50%;
+            @include borderRadius(32px);
+            @include transform(skew(-6deg) translateY(-50%));
+        }
+    }
+    @include media-breakpoint-up-width(lg){
+        z-index: -1 !important;
+        padding: 74px 0;
+
+        &.subheading-block-bg{
+            padding: 74px 0;
+            
+            &::before{
+                display: block;
+            }
+        }
+    }
+}

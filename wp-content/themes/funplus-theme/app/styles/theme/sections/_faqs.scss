@@ -1,0 +1,22 @@
+.faqs{
+    .subheading{
+        margin-bottom: 76px;
+    }
+    &__faq {
+        margin-bottom:20px;
+        @include media-breakpoint-up-width(lg){
+            margin-bottom:40px;
+        }
+    }
+    &__body {
+        margin-left:25px;
+        @include media-breakpoint-up-width(md){
+            margin-left:50px
+
+        }
+
+        p:last-of-type {
+            margin-bottom:0
+        }
+    }
+}

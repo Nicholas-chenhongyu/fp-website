@@ -1,0 +1,43 @@
+{
+    "key": "group_60cc939725475",
+    "title": "Clone - Spacing",
+    "fields": [
+        {
+            "key": "field_60cc93a3ce95a",
+            "label": "Enable Spacing?",
+            "name": "section_spacing",
+            "type": "true_false",
+            "instructions": "Spacing will add a spacer after the current block and the next. You can turn off this setting to disable spacing between blocks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Spacing",
+            "ui_off_text": "No Spacing"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": ""
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1624614151
+}

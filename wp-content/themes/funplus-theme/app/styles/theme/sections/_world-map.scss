@@ -1,0 +1,267 @@
+// World Map
+.world-map{
+    position: relative;
+    background-color: $black;
+    color: $white; 
+    padding: 40px 0;
+
+    .description{
+        // margin-bottom: 70px;
+
+        p:last-child{
+            margin-bottom: 0;
+        }
+    }
+    svg{
+        display: none;
+        width: 100%;
+        height: auto;
+    }
+    .pin{
+        display:none;
+        z-index: 1;
+        position: absolute;
+        top: 10px;
+        left: 100px;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        background: transparent url("data:image/svg+xml,%3Csvg width='26' height='30' viewBox='0 0 26 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 12.3333C25 21.6666 13 29.6666 13 29.6666C13 29.6666 1 21.6666 1 12.3333C1 9.15071 2.26428 6.09847 4.51472 3.84803C6.76515 1.59759 9.8174 0.333313 13 0.333313C16.1826 0.333313 19.2348 1.59759 21.4853 3.84803C23.7357 6.09847 25 9.15071 25 12.3333Z' fill='%23FF9800' stroke='%23FF9800' stroke-width='0.299065'/%3E%3Cpath d='M19.8822 7.16802H19.1986C18.8386 7.16802 18.547 6.87637 18.547 6.51637V5.83281C18.547 5.25862 18.0821 4.78925 17.5034 4.78925C16.9292 4.78925 16.4598 5.25406 16.4598 5.83281V6.51637C16.4598 6.87637 16.1682 7.16802 15.8082 7.16802H15.1246C14.5504 7.16802 14.0811 7.63284 14.0811 8.21159C14.0811 8.78578 14.5459 9.25515 15.1246 9.25515H15.8082C16.1682 9.25515 16.4598 9.5468 16.4598 9.90681V10.5904C16.4598 11.1646 16.9247 11.6339 17.5034 11.6339C18.0776 11.6339 18.547 11.1691 18.547 10.5904V9.90681C18.547 9.5468 18.8386 9.25515 19.1986 9.25515H19.8822C20.4564 9.25515 20.9257 8.79033 20.9257 8.21159C20.9257 7.63284 20.4609 7.16802 19.8822 7.16802Z' fill='white'/%3E%3Cpath d='M16.6942 12.2818V15.7901C16.6942 16.0593 16.4757 16.2782 16.207 16.2782H8.92585C8.63898 16.2782 8.41585 16.0319 8.43862 15.7445L8.9896 9.42137C9.01237 9.17045 9.22183 8.97428 9.47683 8.97428H13.3929C13.2973 8.73249 13.2426 8.46788 13.2426 8.18959C13.2426 7.9113 13.2973 7.65126 13.3929 7.40491H9.39032C8.37943 7.40491 7.53246 8.18047 7.44595 9.1887L6.87675 15.7171C6.77657 16.8622 7.67818 17.8431 8.82112 17.8431H16.3072C17.3864 17.8431 18.2606 16.9671 18.2606 15.8859V12.2818C18.0193 12.3776 17.7552 12.4324 17.4774 12.4324C17.1997 12.4324 16.9356 12.3776 16.6942 12.2818Z' fill='white'/%3E%3C/svg%3E%0A") no-repeat center;
+        background-size: auto 30px;
+        @include transition(.3s background ease);
+
+        &.active,
+        &:hover{
+            background: transparent url("data:image/svg+xml,%3Csvg width='26' height='30' viewBox='0 0 26 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 12.3333C25 21.6666 13 29.6666 13 29.6666C13 29.6666 1 21.6666 1 12.3333C1 9.15071 2.26428 6.09847 4.51472 3.84803C6.76515 1.59759 9.8174 0.333313 13 0.333313C16.1826 0.333313 19.2348 1.59759 21.4853 3.84803C23.7357 6.09847 25 9.15071 25 12.3333Z' fill='white' stroke='%23FF9800' stroke-width='0.299065'/%3E%3Cpath d='M19.8822 7.16802H19.1986C18.8386 7.16802 18.547 6.87637 18.547 6.51637V5.83281C18.547 5.25862 18.0821 4.78925 17.5034 4.78925C16.9292 4.78925 16.4598 5.25406 16.4598 5.83281V6.51637C16.4598 6.87637 16.1682 7.16802 15.8082 7.16802H15.1246C14.5504 7.16802 14.0811 7.63284 14.0811 8.21159C14.0811 8.78578 14.5459 9.25515 15.1246 9.25515H15.8082C16.1682 9.25515 16.4598 9.5468 16.4598 9.90681V10.5904C16.4598 11.1646 16.9247 11.6339 17.5034 11.6339C18.0776 11.6339 18.547 11.1691 18.547 10.5904V9.90681C18.547 9.5468 18.8386 9.25515 19.1986 9.25515H19.8822C20.4564 9.25515 20.9257 8.79033 20.9257 8.21159C20.9257 7.63284 20.4609 7.16802 19.8822 7.16802Z' fill='%23FF5A00'/%3E%3Cpath d='M16.6942 12.2818V15.7901C16.6942 16.0593 16.4757 16.2782 16.207 16.2782H8.92585C8.63898 16.2782 8.41585 16.0319 8.43862 15.7445L8.9896 9.42137C9.01237 9.17045 9.22183 8.97428 9.47683 8.97428H13.3929C13.2973 8.73249 13.2426 8.46788 13.2426 8.18959C13.2426 7.9113 13.2973 7.65126 13.3929 7.40491H9.39032C8.37943 7.40491 7.53246 8.18047 7.44595 9.1887L6.87675 15.7171C6.77657 16.8622 7.67818 17.8431 8.82112 17.8431H16.3072C17.3864 17.8431 18.2606 16.9671 18.2606 15.8859V12.2818C18.0193 12.3776 17.7552 12.4324 17.4774 12.4324C17.1997 12.4324 16.9356 12.3776 16.6942 12.2818Z' fill='%23FF5A00'/%3E%3C/svg%3E%0A") no-repeat center;
+        }
+    }
+    &__map__container {
+        position:relative;
+    }
+    &__locations{
+        display:none;
+    }
+    &__location{
+        display: flex;
+        position: relative;
+        background-color: $white;
+        z-index: 2;
+        min-height: 156px;
+        width: 100%;
+        // align-items: center;
+        color: $black;
+        margin-bottom: 15px;
+        @include borderRadius(16px);
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-left: 22px;
+            margin-top: 22px;
+            margin-bottom: 22px;
+        }
+
+        &__image{
+            position: relative;
+            margin-left: -16px;
+            min-height: 141px;
+            width: 50%;
+            min-width: 50%;
+            flex-direction: row;
+            align-items: center;
+            overflow: hidden;
+            @include borderRadius(16px 0 0 16px);
+            @include transform(skew(-8deg));
+
+            img{
+                position:absolute;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+                z-index: 0;
+                display: block;
+                margin-left: -16px;
+                width: calc(100% + 32px);
+                height: calc(100% + 2px);
+                object-fit: cover;
+                object-position: center;
+                @include borderRadius(16px 0 0 16px);
+                @include transform(skew(8deg));
+            }
+        }
+        &__text{
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+
+            img{
+                height: 18px;
+                width: auto;
+                margin-top:3px;
+                object-fit: contain;
+                object-position: center;
+                margin-right: 10px;
+                -webkit-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.45);
+                -moz-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.45);
+                box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.45);
+                transition: opacity 0.5s ease 0.1s
+            }
+            .world-map__location__title {
+                font-family: $font-d-din-normal-exp;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                margin: 0;
+                transition: opacity 0.5s ease 0.15s
+            }
+            
+        }
+        .world-map__location__description {
+            font-family: $font-d-din-normal-exp;
+            font-size: 12px;
+            line-height: 18px;
+            margin: 0;
+            transition: opacity 0.5s ease 0.2s
+        }
+
+    }
+    @include media-breakpoint-up-width(lg){
+        .pin {
+            display: block;
+        }
+        .world-map__location.active {
+            .world-map__location__text {
+                img {
+                    opacity:1;
+                }
+                p {
+                    opacity:1
+                }
+            }
+            .world-map__location__description {
+                opacity:1
+            }
+        }
+        padding: 96px 0 46px;
+
+        // .description{
+        //     margin-bottom: 70px;
+        // }
+        svg{
+            display: block;
+        }
+        &__locations{
+            display: block;
+            padding: 0;
+        }
+        &__location{
+            display: none;
+            position: absolute;
+            min-height: 94px;
+            width: 260px;
+            margin-bottom: 0;
+            padding-right:22px;
+
+        &__wrapper {
+            margin-top: 13px;
+            margin-bottom: 13px;
+        }
+
+        // &__button {
+
+        // }
+
+            &__image{
+                min-height: 94px;
+            }
+            &__text{
+                img {
+                    opacity:0;
+                } 
+                p {
+                    opacity:0;
+                }
+            }
+            &.has-link {
+                width: 330px;
+            }
+            .world-map__location__description {
+                opacity:0
+            }
+        }
+    }
+
+
+    .locations-slider {
+        @include media-breakpoint-up-width(lg){
+            display:none;
+        }
+
+        &__thumbs {
+            margin-bottom:42px;
+            overflow:visible;
+            .swiper-wrapper {
+                align-items:center;
+            }
+        }
+        &__thumb {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 18px;
+            letter-spacing: 3.35px;
+            text-transform: uppercase;
+            color: $white;
+            opacity: 0.6;
+            text-align: center;
+
+            &__text {
+                position: relative;
+                width: min-content;
+                margin-right:auto;
+                margin-left:auto;
+
+                &__underline {
+                    position: absolute;
+                    right: 50%;
+                    bottom: -8px;
+                    height: 5px;
+                    background-color: transparent;
+                    width: 100%;
+                    transform:translateX(50%)
+                }
+
+            }
+            
+            &.swiper-slide-thumb-active {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 28px;
+                line-height: 30px;
+                letter-spacing: 3.38333px;
+                opacity:1;
+                
+                .locations-slider__thumb__text {
+                    &__underline {
+                        background-color: $orange;
+                    }
+    
+                }
+
+            }
+        }
+    }
+
+
+    .heading {
+        margin-bottom:40px;
+        @include media-breakpoint-up-width(lg){
+            .description {
+                p {
+                    margin-right:33%;
+                }
+            }
+        }
+
+    }
+}
