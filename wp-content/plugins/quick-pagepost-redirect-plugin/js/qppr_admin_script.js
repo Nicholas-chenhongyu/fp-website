@@ -1,15 +1,15 @@
 ;(function($,d,z){
 	$(d).ready(function() {
 		$('span.qppr_meta_help').css('display','none');
-		$('.inside').delegate('span.qppr_meta_help_wrap', 'hover', function(e){
-			var $curdisp = $(this).find('span.qppr_meta_help').css('display');
-			if($curdisp == 'none'){
+
+		$('.inside').on({
+			mouseenter: function () {
 				$(this).find('span.qppr_meta_help').css('display','inline');
-			}else{
+			},
+			mouseleave: function () {
 				$(this).find('span.qppr_meta_help').css('display','none');
 			}
-			e.preventDefault();
-		});
+		}, 'span.qppr_meta_help_wrap');
 		var mainurl = z.ajaxurl;
 		$( '#pprredirect_type').on( 'change', function(e){
 			e.preventDefault();

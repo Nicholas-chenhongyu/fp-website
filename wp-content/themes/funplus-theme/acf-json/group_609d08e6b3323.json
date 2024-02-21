@@ -330,6 +330,22 @@
             "placeholder": ""
         },
         {
+            "key": "field_620b5b99f5fc8",
+            "label": "Linkedin URL",
+            "name": "social_li",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_609d428280fd4",
             "label": "Footer",
             "name": "",
@@ -488,7 +504,7 @@
             ]
         },
         {
-            "key": "field_647596717f320",
+            "key": "field_647599b6902d1",
             "label": "Event",
             "name": "",
             "type": "tab",
@@ -504,7 +520,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_647596847f321",
+            "key": "field_647599bf902d2",
             "label": "Green Game Jam",
             "name": "green_game_jam",
             "type": "true_false",
@@ -540,5 +556,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1685427883
+    "modified": 1685428693
 }

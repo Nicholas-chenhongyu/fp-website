@@ -9,73 +9,42 @@ $show_map = get_field('show_map');
 ?>
 
 <?php if ($show_map) :
-    get_template_part('template-parts/global/map');
+  get_template_part('template-parts/global/map');
 endif; ?>
 
-<?php get_template_part('template-parts/global/cookie');?>
+<?php get_template_part('template-parts/global/cookie'); ?>
 
 
 <footer class="footer wow" data-wow-offset="100">
-    <div class="container container-sm">
-        <div class="row">
-            <div class="footer__col col-12 col-md-3">
-                <a class="footer__logo fadeIn" href="<?php echo get_home_url('/'); ?>">
-                    <?php get_template_part('template-parts/logo/logo-orange'); ?>
-                </a>
-            </div>
-            <div class="col-12 col-md-8 offset-0 offset-md-1">
-                <div class="footer-menus">
-                    <div class="footer__col">
-                        <?php if ($menu_1) : ?>
-                            <p class="footer__title fadeIn"><?php echo $menu_1; ?></p>
-                        <?php endif; ?>
-                        <?php wp_nav_menu([
-                            'theme_location' => 'footer-1',
-                            'menu_class'     => 'footer__menu fadeIn'
-                        ]); ?>
-                    </div>
-                    <div class="footer__col">
-                        <?php if ($menu_2) : ?>
-                            <p class="footer__title fadeIn"><?php echo $menu_2; ?></p>
-                        <?php endif; ?>
-                        <?php wp_nav_menu([
-                            'theme_location' => 'footer-2',
-                            'menu_class'     => 'footer__menu fadeIn'
-                        ]); ?>
-                    </div>
-                    <div class="footer__col">
-                        <?php if ($menu_3) : ?>
-                            <p class="footer__title fadeIn"><?php echo $menu_3; ?></p>
-                        <?php endif; ?>
-                        <?php wp_nav_menu([
-                            'theme_location' => 'footer-3',
-                            'menu_class'     => 'footer__menu fadeIn'
-                        ]); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <ul class="footer__bottom">
-            <li class="fadeIn">&copy; <?php echo get_bloginfo('name'); ?> <?php echo date('Y'); ?></li>
-            <?php if ($privacy_link) : ?>
-                <li class="fadeIn"><a href="<?php echo esc_url($privacy_link['url']); ?>" target="<?php echo esc_attr($privacy_link['target']); ?>"><?php echo $privacy_link['title']; ?></a></li>
-            <?php endif; ?>
-            <?php if ($tcs_link) : ?>
-                <li class="fadeIn"><a href="<?php echo esc_url($tcs_link['url']); ?>" target="<?php echo esc_attr($tcs_link['target']); ?>"><?php echo $tcs_link['title']; ?></a></li>
-            <?php endif; ?>
-        </ul>
+  <div class="container container-sm">
+    <div class="footer-contact">
+      <?php wp_nav_menu([
+        'theme_location' => 'footer-contact',
+        'menu_class'     => 'footer__menu fadeIn'
+      ]); ?>
     </div>
+    <?php get_template_part('template-parts/global/social-icons', 'null', ['show_labels' => false, 'color' => '#fff', 'alt_color' => '#000000']); ?>
+    <ul class="footer__bottom">
+      <?php if ($privacy_link) : ?>
+        <li class="fadeIn"><a href="<?php echo esc_url($privacy_link['url']); ?>" target="<?php echo esc_attr($privacy_link['target']); ?>"><?php echo $privacy_link['title']; ?></a></li>
+      <?php endif; ?>
+      <li class="fadeIn">&copy; <?php echo get_bloginfo('name'); ?> <?php echo date('Y'); ?></li>
+      <?php if ($tcs_link) : ?>
+        <li class="fadeIn"><a href="<?php echo esc_url($tcs_link['url']); ?>" target="<?php echo esc_attr($tcs_link['target']); ?>"><?php echo $tcs_link['title']; ?></a></li>
+      <?php endif; ?>
+    </ul>
+  </div>
 </footer>
 
 <div class="mobile-nav" data-wow-offset="70">
-    <div class="mobile-nav__inner">
-        <?php get_template_part('template-parts/global/language-select'); ?>
-        <?php wp_nav_menu([
-            'theme_location' => 'mobile-menu',
-            'menu_class'     => 'mobile-nav__nav'
-        ]); ?>
-        <div class="deadzone"></div>
-    </div>
+  <div class="mobile-nav__inner">
+    <?php get_template_part('template-parts/global/language-select'); ?>
+    <?php wp_nav_menu([
+      'theme_location' => 'mobile-menu',
+      'menu_class'     => 'mobile-nav__nav'
+    ]); ?>
+    <div class="deadzone"></div>
+  </div>
 </div>
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.2/smooth-scrollbar.js"></script>

@@ -125,6 +125,8 @@ class Adapter {
 
 	/**
 	 * Create the schema table, if necessary.
+	 *
+	 * @return void
 	 */
 	public function create_schema_version_table() {
 		if ( ! $this->has_table( $this->get_schema_version_table_name() ) ) {
@@ -137,6 +139,8 @@ class Adapter {
 
 	/**
 	 * Starts a transaction.
+	 *
+	 * @return void
 	 */
 	public function start_transaction() {
 		if ( $this->in_transaction() === false ) {
@@ -146,6 +150,8 @@ class Adapter {
 
 	/**
 	 * Commits a transaction.
+	 *
+	 * @return void
 	 */
 	public function commit_transaction() {
 		if ( $this->in_transaction() ) {
@@ -155,6 +161,8 @@ class Adapter {
 
 	/**
 	 * Rollbacks a transaction.
+	 *
+	 * @return void
 	 */
 	public function rollback_transaction() {
 		if ( $this->in_transaction() ) {
@@ -165,12 +173,12 @@ class Adapter {
 	/**
 	 * Quotes a table name string.
 	 *
-	 * @param string $string Table name.
+	 * @param string $text Table name.
 	 *
 	 * @return string
 	 */
-	public function quote_table( $string ) {
-		return '`' . $string . '`';
+	public function quote_table( $text ) {
+		return '`' . $text . '`';
 	}
 
 	/**
@@ -293,7 +301,7 @@ class Adapter {
 		$query_type = $this->determine_query_type( $query );
 		$data       = [];
 		if ( $query_type === Constants::SQL_SELECT || $query_type === Constants::SQL_SHOW ) {
-			$data = $wpdb->get_results( $query, ARRAY_A );
+			$data = $wpdb->get_results( $query, \ARRAY_A );
 			if ( $data === false ) {
 				return false;
 			}
@@ -387,25 +395,25 @@ class Adapter {
 	/**
 	 * Escapes a string for usage in queries.
 	 *
-	 * @param string $string The string.
+	 * @param string $text The string.
 	 *
 	 * @return string
 	 */
-	public function quote_string( $string ) {
+	public function quote_string( $text ) {
 		global $wpdb;
 
-		return $wpdb->_escape( $string );
+		return $wpdb->_escape( $text );
 	}
 
 	/**
 	 * Returns a quoted string.
 	 *
-	 * @param string $string The string.
+	 * @param string $text The string.
 	 *
 	 * @return string
 	 */
-	public function identifier( $string ) {
-		return '`' . $string . '`';
+	public function identifier( $text ) {
+		return '`' . $text . '`';
 	}
 
 	/**
@@ -542,7 +550,7 @@ class Adapter {
 			}
 
 			return $result;
-		} catch ( \Exception $e ) {
+		} catch ( Exception $e ) {
 			return null;
 		}
 	}
@@ -550,9 +558,9 @@ class Adapter {
 	/**
 	 * Adds an index.
 	 *
-	 * @param string $table_name  The table name.
-	 * @param string $column_name The column name.
-	 * @param array  $options     Index options.
+	 * @param string       $table_name  The table name.
+	 * @param array|string $column_name The column name(s).
+	 * @param array        $options     Index options.
 	 *
 	 * @return bool
 	 */
@@ -605,9 +613,9 @@ class Adapter {
 	/**
 	 * Drops an index.
 	 *
-	 * @param string $table_name  The table name.
-	 * @param string $column_name The column name.
-	 * @param array  $options     Index options.
+	 * @param string       $table_name  The table name.
+	 * @param array|string $column_name The column name(s).
+	 * @param array        $options     Index options.
 	 *
 	 * @return bool
 	 */
@@ -678,9 +686,9 @@ class Adapter {
 	/**
 	 * Checks an index.
 	 *
-	 * @param string $table_name  The table name.
-	 * @param string $column_name The column name.
-	 * @param array  $options     Index options.
+	 * @param string       $table_name  The table name.
+	 * @param array|string $column_name The column name(s).
+	 * @param array        $options     Index options.
 	 *
 	 * @return bool Whether or not the index exists.
 	 */
@@ -794,10 +802,8 @@ class Adapter {
 					$column_type_sql .= \sprintf( '(%d)', $precision );
 				}
 			}
-			else {
-				if ( $scale ) {
-					throw new Exception( "Error adding $type column: precision cannot be empty if scale is specified" );
-				}
+			elseif ( $scale ) {
+				throw new Exception( "Error adding $type column: precision cannot be empty if scale is specified" );
 			}
 		}
 		elseif ( $type === 'enum' ) {
@@ -998,13 +1004,13 @@ class Adapter {
 	 * Detect whether or not the string represents a function call and if so
 	 * do not wrap it in single-quotes, otherwise do wrap in single quotes.
 	 *
-	 * @param string $string The string.
+	 * @param string $text The string.
 	 *
 	 * @return bool Whether or not it's a SQL function call.
 	 */
-	private function is_sql_method_call( $string ) {
-		$string = \trim( $string );
-		if ( \substr( $string, -2, 2 ) === '()' ) {
+	private function is_sql_method_call( $text ) {
+		$text = \trim( $text );
+		if ( \substr( $text, -2, 2 ) === '()' ) {
 			return true;
 		}
 		return false;

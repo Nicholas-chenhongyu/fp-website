@@ -135,9 +135,25 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_62be606106b3c",
+                    "key": "field_62ecc55036de9",
                     "label": "VK",
                     "name": "vk",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6392fd8486b78",
+                    "label": "Linkedin",
+                    "name": "linkedin",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -191,5 +207,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1656643695
+    "modified": 1670577555
 }

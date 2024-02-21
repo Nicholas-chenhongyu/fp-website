@@ -216,7 +216,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_632d81d5e3344",
+                    "key": "field_632d7e302efb5",
                     "label": "PC",
                     "name": "pc",
                     "type": "url",
@@ -279,9 +279,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "game"
+                "value": ""
             }
         ]
     ],
@@ -293,5 +293,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1663926752
+    "modified": 1703064909
 }

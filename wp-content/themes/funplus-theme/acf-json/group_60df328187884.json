@@ -56,7 +56,7 @@
                 "id": ""
             },
             "clone": [
-                "group_60ddd543ec32a"
+                "group_61151930b9e8e"
             ],
             "display": "seamless",
             "layout": "block",
@@ -88,44 +88,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "page"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "29"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "16"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "18"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "20"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "3"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "57"
-            },
-            {
-                "param": "page",
-                "operator": "!=",
-                "value": "1626"
+                "value": ""
             }
         ]
     ],
@@ -137,5 +102,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1678332047
+    "modified": 1703055949
 }

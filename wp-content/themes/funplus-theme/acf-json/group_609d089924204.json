@@ -161,6 +161,37 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6475ab875c6e7": {
+                    "key": "layout_6475ab875c6e7",
+                    "name": "button",
+                    "label": "Button",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6475ab875c6e8",
+                            "label": "Button",
+                            "name": "button",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6475a593dceb2"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_60a25520d5226": {
                     "key": "layout_60a25520d5226",
                     "name": "about",
@@ -316,14 +347,14 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_62b2b87e481f7": {
-                    "key": "layout_62b2b87e481f7",
+                "layout_64141829f48cf": {
+                    "key": "layout_64141829f48cf",
                     "name": "press_slider",
                     "label": "Press Slider",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_62b2b89c481f9",
+                            "key": "field_64141829f48d0",
                             "label": "Press",
                             "name": "press",
                             "type": "clone",
@@ -337,6 +368,99 @@
                             },
                             "clone": [
                                 "group_62b2b83b6ceae"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64141a8aee3ba": {
+                    "key": "layout_64141a8aee3ba",
+                    "name": "awards_slider",
+                    "label": "Awards Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64141a8aee3bb",
+                            "label": "Awards",
+                            "name": "awards",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64141a527148d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_62fdaca14f5d1": {
+                    "key": "layout_62fdaca14f5d1",
+                    "name": "privacies_slider",
+                    "label": "Privacies Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62fdaca14f5d2",
+                            "label": "Privacy Policies",
+                            "name": "privacy_policies",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62fdabdb96bd3"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6417fe320cd2b": {
+                    "key": "layout_6417fe320cd2b",
+                    "name": "people_slider",
+                    "label": "People Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6417fe320cd2c",
+                            "label": "People",
+                            "name": "people",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6417fdf89f5ce"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -564,6 +688,68 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_64143faecab03": {
+                    "key": "layout_64143faecab03",
+                    "name": "partnerships_list",
+                    "label": "Partnerships List",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64143faecab04",
+                            "label": "Partnerships List",
+                            "name": "partnerships_list",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64143f720371a"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6389987527db5": {
+                    "key": "layout_6389987527db5",
+                    "name": "games_list_select",
+                    "label": "Games List Select",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6389987527db6",
+                            "label": "Games List Select",
+                            "name": "games_list_select",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_63899617c10f2"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_62086658fbf0d": {
                     "key": "layout_62086658fbf0d",
                     "name": "careers_list",
@@ -585,6 +771,37 @@
                             },
                             "clone": [
                                 "group_620865eb3b2a3"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64098b4debcd9": {
+                    "key": "layout_64098b4debcd9",
+                    "name": "info_list",
+                    "label": "Insider Info List",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_64098b4debcda",
+                            "label": "Info List",
+                            "name": "info_list",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64098b08b4677"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -922,6 +1139,41 @@
                 "operator": "==",
                 "value": "career"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "insider_info"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "awards"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "partnership"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "people"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "game_update"
+            }
         ]
     ],
     "menu_order": 0,
@@ -932,5 +1184,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1655879872
+    "modified": 1685433263
 }

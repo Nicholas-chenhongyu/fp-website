@@ -6,53 +6,67 @@ use Yoast\WP\SEO\Builders\Indexable_Builder;
 use Yoast\WP\SEO\Helpers\Post_Type_Helper;
 use Yoast\WP\SEO\Models\Indexable;
 use Yoast\WP\SEO\Repositories\Indexable_Repository;
+use Yoast\WP\SEO\Values\Indexables\Indexable_Builder_Versions;
 
 /**
  * Reindexing action for post type archive indexables.
+ *
+ * @phpcs:disable Yoast.NamingConventions.ObjectNameDepth.MaxExceeded
  */
 class Indexable_Post_Type_Archive_Indexation_Action implements Indexation_Action_Interface, Limited_Indexing_Action_Interface {
+
 
 	/**
 	 * The transient cache key.
 	 */
-	const UNINDEXED_COUNT_TRANSIENT = 'wpseo_total_unindexed_post_type_archives';
+	public const UNINDEXED_COUNT_TRANSIENT = 'wpseo_total_unindexed_post_type_archives';
 
 	/**
 	 * The post type helper.
 	 *
 	 * @var Post_Type_Helper
 	 */
-	private $post_type;
+	protected $post_type;
 
 	/**
 	 * The indexable repository.
 	 *
 	 * @var Indexable_Repository
 	 */
-	private $repository;
+	protected $repository;
 
 	/**
 	 * The indexable builder.
 	 *
 	 * @var Indexable_Builder
 	 */
-	private $builder;
+	protected $builder;
+
+	/**
+	 * The current version of the post type archive indexable builder.
+	 *
+	 * @var int
+	 */
+	protected $version;
 
 	/**
 	 * Indexation_Post_Type_Archive_Action constructor.
 	 *
-	 * @param Indexable_Repository $repository The indexable repository.
-	 * @param Indexable_Builder    $builder    The indexable builder.
-	 * @param Post_Type_Helper     $post_type  The post type helper.
+	 * @param Indexable_Repository       $repository The indexable repository.
+	 * @param Indexable_Builder          $builder    The indexable builder.
+	 * @param Post_Type_Helper           $post_type  The post type helper.
+	 * @param Indexable_Builder_Versions $versions   The current versions of all indexable builders.
 	 */
 	public function __construct(
 		Indexable_Repository $repository,
 		Indexable_Builder $builder,
-		Post_Type_Helper $post_type
+		Post_Type_Helper $post_type,
+		Indexable_Builder_Versions $versions
 	) {
 		$this->repository = $repository;
 		$this->builder    = $builder;
 		$this->post_type  = $post_type;
+		$this->version    = $versions->get_latest_version_for_type( 'post-type-archive' );
 	}
 
 	/**
@@ -74,6 +88,13 @@ class Indexable_Post_Type_Archive_Indexation_Action implements Indexation_Action
 
 		\set_transient( static::UNINDEXED_COUNT_TRANSIENT, $result, \DAY_IN_SECONDS );
 
+		/**
+		 * Action: 'wpseo_indexables_unindexed_calculated' - sets an option to timestamp when there are no unindexed indexables left.
+		 *
+		 * @internal
+		 */
+		\do_action( 'wpseo_indexables_unindexed_calculated', static::UNINDEXED_COUNT_TRANSIENT, $result );
+
 		return $result;
 	}
 
@@ -90,7 +111,9 @@ class Indexable_Post_Type_Archive_Indexation_Action implements Indexation_Action
 			$indexables[] = $this->builder->build_for_post_type_archive( $post_type_archive );
 		}
 
-		\delete_transient( static::UNINDEXED_COUNT_TRANSIENT );
+		if ( \count( $indexables ) > 0 ) {
+			\delete_transient( static::UNINDEXED_COUNT_TRANSIENT );
+		}
 
 		return $indexables;
 	}
@@ -104,7 +127,7 @@ class Indexable_Post_Type_Archive_Indexation_Action implements Indexation_Action
 		/**
 		 * Filter 'wpseo_post_type_archive_indexation_limit' - Allow filtering the number of posts indexed during each indexing pass.
 		 *
-		 * @api int The maximum number of posts indexed.
+		 * @param int $limit The maximum number of posts indexed.
 		 */
 		$limit = \apply_filters( 'wpseo_post_type_archive_indexation_limit', 25 );
 
@@ -122,7 +145,7 @@ class Indexable_Post_Type_Archive_Indexation_Action implements Indexation_Action
 	 *
 	 * @return array The list of post types for which no indexable for its archive page has been made yet.
 	 */
-	private function get_unindexed_post_type_archives( $limit = false ) {
+	protected function get_unindexed_post_type_archives( $limit = false ) {
 		$post_types_with_archive_pages = $this->get_post_types_with_archive_pages();
 		$indexed_post_types            = $this->get_indexed_post_type_archives();
 
@@ -140,10 +163,9 @@ class Indexable_Post_Type_Archive_Indexation_Action implements Indexation_Action
 	 *
 	 * @return array The list of names of all post types that have archive pages.
 	 */
-	private function get_post_types_with_archive_pages() {
+	protected function get_post_types_with_archive_pages() {
 		// We only want to index archive pages of public post types that have them.
-		$public_post_types       = $this->post_type->get_public_post_types( 'object' );
-		$post_types_with_archive = \array_filter( $public_post_types, [ $this->post_type, 'has_archive' ] );
+		$post_types_with_archive = $this->post_type->get_indexable_post_archives();
 
 		// We only need the post type names, not the objects.
 		$post_types = [];
@@ -159,19 +181,21 @@ class Indexable_Post_Type_Archive_Indexation_Action implements Indexation_Action
 	 *
 	 * @return array The list of names of post types with unindexed archive pages.
 	 */
-	private function get_indexed_post_type_archives() {
+	protected function get_indexed_post_type_archives() {
 		$results = $this->repository->query()
 			->select( 'object_sub_type' )
 			->where( 'object_type', 'post-type-archive' )
+			->where_equal( 'version', $this->version )
 			->find_array();
 
 		if ( $results === false ) {
 			return [];
 		}
 
-		$callback = static function( $result ) {
+		$callback = static function ( $result ) {
 			return $result['object_sub_type'];
 		};
+
 		return \array_map( $callback, $results );
 	}
 

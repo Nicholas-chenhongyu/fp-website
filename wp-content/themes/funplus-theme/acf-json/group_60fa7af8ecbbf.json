@@ -7,7 +7,7 @@
             "label": "Shapes",
             "name": "shapes",
             "type": "flexible_content",
-            "instructions": "",
+            "instructions": "Pick which shapes appear in the banner",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -318,5 +318,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1627038081
+    "modified": 1666949056
 }

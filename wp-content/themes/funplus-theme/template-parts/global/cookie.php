@@ -2,7 +2,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <img src="<?php echo get_stylesheet_directory_uri().'/assets/cookie_header.png' ?>" alt="cookie">
+        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/cookie_header.png' ?>" alt="cookie">
       </div>
       <div class="modal-body">
         <h6>COOKIES</h6>
@@ -23,7 +23,7 @@
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <img src="<?php echo get_stylesheet_directory_uri().'/assets/cookie_header.png' ?>" alt="cookie">
+        <img src="<?php echo get_stylesheet_directory_uri() . '/assets/cookie_header.png' ?>" alt="cookie">
       </div>
       <div class="modal-body">
         <div class="cookie-item">
@@ -60,59 +60,61 @@
 </div>
 
 <script type="text/javascript">
-  function setCookie(name,value,days) {
+  function setCookie(name, value, days) {
     var expires = "";
     if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days*24*60*60*1000));
-        expires = "; expires=" + date.toUTCString();
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
     }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
   }
+
   function getCookie(name) {
-      var nameEQ = name + "=";
-      var ca = document.cookie.split(';');
-      for(var i=0;i < ca.length;i++) {
-          var c = ca[i];
-          while (c.charAt(0)==' ') c = c.substring(1,c.length);
-          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-      }
-      return null;
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
   }
+
   function consentAccess(access) {
     // gtag('consent', 'update', {
     //   'ad_storage': access,
     //   'analytics_storage': access
     // });
     if (access === 'granted') {
-      setCookie('fp_opt','in',365)
+      setCookie('fp_opt', 'in', 365)
     }
     if (access === 'denied') {
-      setCookie('fp_opt','out',365)
+      setCookie('fp_opt', 'out', 365)
     }
   }
 
   jQuery(document).ready(() => {
     // only show the popup without fp_put cookie (first time visit)
     // fp_opt keep the access of GA as currently we only have ga cookies
-    if(!getCookie('fp_opt')) {
+    if (!getCookie('fp_opt')) {
       $('#cookieModal').modal()
     }
-    
+
     // accept all cookies
-    $('button.accept').click(function(){
+    $('button.accept').click(function() {
       $('#cookieModal').modal('hide')
       consentAccess('granted')
     })
 
     // reject all cookies
-    $('button.reject').click(function(){
+    $('button.reject').click(function() {
       $('#cookieModal').modal('hide')
       consentAccess('denied')
     })
 
     // advanced config
-    $('.cookie-config').click(function(){
+    $('.cookie-config').click(function() {
       $('#cookieModal').modal('hide')
       $('#cookieConfigModal').modal()
     })
@@ -122,7 +124,7 @@
     $('button.reject-all').click(function() {
       $('.cookie-item input[type="checkbox"]:not(:disabled)').prop('checked', false);
     })
-    $('button.save').click(function(){
+    $('button.save').click(function() {
       $('#cookieConfigModal').modal('hide')
 
       if ($('#analytics').is(":checked")) {

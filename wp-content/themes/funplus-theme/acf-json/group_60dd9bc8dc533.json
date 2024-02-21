@@ -23,7 +23,7 @@
             "sub_fields": [
                 {
                     "key": "field_60dd9beac5247",
-                    "label": "Statistic Number",
+                    "label": "Statistic",
                     "name": "stat",
                     "type": "text",
                     "instructions": "",
@@ -41,12 +41,12 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_61a599af8c579",
+                    "key": "field_63b7f55b6e439",
                     "label": "Statistic Character",
                     "name": "stat_char",
                     "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -122,5 +122,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1638242787
+    "modified": 1673000382
 }

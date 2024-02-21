@@ -24,7 +24,11 @@ jQuery(document).ready(function($) {
             var files = $(this)[0].files;
             var zlfilename = '';
             for (var i = 0; i < files.length; i++) {
-                $(zl_filecontainer + ' p.wpcf7-form-control-wrap:last span.mfcf7-zl-multifile-name').append(files[i].name + "&nbsp;");
+                var seprator = '&nbsp;';
+                if (i != (files.length - 1)) {
+                    seprator = '&nbsp;|&nbsp;';
+                }
+                $(zl_filecontainer + ' p.wpcf7-form-control-wrap:last span.mfcf7-zl-multifile-name').append(files[i].name + seprator);
                 zlfilename += files[i].name + "&nbsp;"
             }
             // localStorage.removeItem('zlfilename');

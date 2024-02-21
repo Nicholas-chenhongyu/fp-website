@@ -6,6 +6,7 @@
             "key": "field_619ddeba03f18",
             "label": "Heading",
             "name": "heading",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -25,6 +26,7 @@
             "key": "field_619de1ca26f4e",
             "label": "Team Member",
             "name": "member",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -38,12 +40,13 @@
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "",
+            "button_label": "Add Row",
             "sub_fields": [
                 {
                     "key": "field_619de1e326f4f",
-                    "label": "Name",
+                    "label": "First Name",
                     "name": "name",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
@@ -53,16 +56,41 @@
                         "class": "",
                         "id": ""
                     },
+                    "wpml_cf_preferences": 0,
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "parent_repeater": "field_619de1ca26f4e"
+                },
+                {
+                    "key": "field_65d33af4fc11d",
+                    "label": "Last Name",
+                    "name": "name_last",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_619de1ca26f4e"
                 },
                 {
                     "key": "field_619de1ed26f50",
                     "label": "Title",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
@@ -76,12 +104,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_619de1ca26f4e"
                 },
                 {
                     "key": "field_619de1f526f51",
                     "label": "Image",
                     "name": "image",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 1,
@@ -100,12 +130,14 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "parent_repeater": "field_619de1ca26f4e"
                 },
                 {
                     "key": "field_619de20026f52",
                     "label": "Linked Profile",
                     "name": "link",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 1,
@@ -116,9 +148,11 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "parent_repeater": "field_619de1ca26f4e"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         }
     ],
     "location": [
@@ -138,5 +172,7 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1637737769
+    "show_in_rest": 0,
+    "acfml_field_group_mode": "translation",
+    "modified": 1708342036
 }

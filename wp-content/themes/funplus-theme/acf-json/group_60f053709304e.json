@@ -90,6 +90,41 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "insider_info"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "awards"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "partnership"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "people"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "game_update"
+            }
         ]
     ],
     "menu_order": 0,
@@ -100,5 +135,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1627035897
+    "modified": 1679483828
 }

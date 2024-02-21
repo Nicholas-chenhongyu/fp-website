@@ -36,6 +36,7 @@ function funplus_setup()
       'footer-1' => esc_html__('Footer 1', 'funplus'),
       'footer-2' => esc_html__('Footer 2', 'funplus'),
       'footer-3' => esc_html__('Footer 3', 'funplus'),
+      'footer-contact' => esc_html__('Footer Contact', 'funplus'),
     )
   );
 }
@@ -657,3 +658,16 @@ function remove_wp_block_library_css()
   wp_dequeue_style('wc-blocks-style'); // Remove WooCommerce block CSS
 }
 add_action('wp_enqueue_scripts', 'remove_wp_block_library_css', 100);
+
+// Add id to enable local scroll
+function add_id_to_heading($content)
+{
+  if (is_page_template('page-blank.php') || is_page_template('page-blank-new.php')) {
+    $i = 1;
+    while (strpos($content, '<h4>') !== false) {
+      $content = preg_replace('/<h4>/', '<h4 id=section-' . $i++ . '>', $content, 1);
+    }
+  }
+  return $content;
+}
+add_filter('acf_the_content', 'add_id_to_heading');

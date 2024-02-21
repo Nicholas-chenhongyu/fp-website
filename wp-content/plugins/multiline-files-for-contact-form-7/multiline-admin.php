@@ -142,6 +142,7 @@ function mfcf7_zl_notice_ignor_temp(){
 	}
 }
 
+
 // Add pro version notice
 add_action( 'admin_notices', 'mfcf7_zl_admin_premium_ver_notice' );
 function mfcf7_zl_admin_premium_ver_notice(){
@@ -166,7 +167,7 @@ function mfcf7_zl_admin_premium_ver_notice(){
               $query_string = $current_url.'?';
           }
         ?>
-			<p class="mfcf7-premium-notice-btn"><a href="https://codecanyon.net/item/multiline-files-upload-for-contact-form-7/20632083" target="_blank"><?php _e('Get Pro version', 'zl-mfcf7');?></a>&nbsp;<a href="<?php echo $query_string; ?>mfcf7_zl_pro_ver_notice_ignor=0"><?php _e('No Thanks', 'zl-mfcf7');?></a></p>
+			<p class="mfcf7-premium-notice-btn"><a href="https://1.envato.market/9W6qL4" target="_blank"><?php _e('Get Pro version', 'zl-mfcf7');?></a>&nbsp;<a href="<?php echo $query_string; ?>mfcf7_zl_pro_ver_notice_ignor=0"><?php _e('No Thanks', 'zl-mfcf7');?></a></p>
       </div>
       <?php
     }
@@ -180,7 +181,8 @@ if(!$rating_tip_option || ($rating_tip_option && time() > $rating_tip_option)){
 	?>
   <div class="notice notice-info 1">
 		<p><?php _e('Love using <strong>Multiline files upload for contact form 7</strong> plugin, why don’t appreciate us?', 'zl-mfcf7');?></p>
-    <p><?php _e('We love and care about you. Our team is putting our maximum efforts to provide you the best functionalities.<br> We would really appreciate if you could spend a couple of seconds to give a Nice Review to the plugin for motivating us!','zl-mfcf7');?></p>
+    	<p><?php _e('We love and care about you. Our team is putting our maximum efforts to provide you the best functionalities.<br> We would really appreciate if you could spend a couple of seconds to give a Nice Review to the plugin for motivating us!','zl-mfcf7');?></p>
+		<p><?php _e('We also offer WordPress Website Development and Customization services:', 'zl-mfcf7');?> <a href="https://zluck.com/contact-us/?utm_source=MFCF7%20Pro%20Plugin&utm_medium=MFCF7%20Pro&utm_campaign=Contact&utm_content=Contact-for%20-development" target="_blank"><?php _e('Request a Quote', 'zl-mfcf7');?></a></p>
 		<p style="margin: 15px 0px;">
 			<span class="mfcf7-premium-notice-btn">
 				<a href="https://wordpress.org/plugins/multiline-files-for-contact-form-7/#reviews" target="_blank"><?php _e('Rate it Now', 'zl-mfcf7');?></a>

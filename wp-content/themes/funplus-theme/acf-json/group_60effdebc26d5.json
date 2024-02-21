@@ -112,9 +112,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "block",
                 "operator": "==",
-                "value": "18"
+                "value": ""
             }
         ]
     ],
@@ -126,5 +126,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1644572794
+    "modified": 1703056539
 }

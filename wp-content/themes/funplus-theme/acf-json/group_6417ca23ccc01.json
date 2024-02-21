@@ -1,0 +1,67 @@
+{
+    "key": "group_6417ca23ccc01",
+    "title": "Settings - Partnership",
+    "fields": [
+        {
+            "key": "field_6417ca23d065a",
+            "label": "List Background",
+            "name": "list_background",
+            "type": "image",
+            "instructions": "This will display as a background image in the Games List block.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6475a6ed9c1fb",
+            "label": "Green Game Jam Page?",
+            "name": "ggj_event",
+            "type": "true_false",
+            "instructions": "if this post is for green game jam event",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "partnership"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1685432142
+}

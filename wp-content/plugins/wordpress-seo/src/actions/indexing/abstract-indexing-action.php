@@ -3,7 +3,7 @@
 namespace Yoast\WP\SEO\Actions\Indexing;
 
 /**
- * Trait used to calculate unindexed object.
+ * Base class of indexing actions.
  */
 abstract class Abstract_Indexing_Action implements Indexation_Action_Interface, Limited_Indexing_Action_Interface {
 
@@ -14,14 +14,14 @@ abstract class Abstract_Indexing_Action implements Indexation_Action_Interface, 
 	 *
 	 * @var string
 	 */
-	const UNINDEXED_COUNT_TRANSIENT = null;
+	public const UNINDEXED_COUNT_TRANSIENT = null;
 
 	/**
 	 * The transient cache key for limited counts.
 	 *
 	 * @var string
 	 */
-	const UNINDEXED_LIMITED_COUNT_TRANSIENT = self::UNINDEXED_COUNT_TRANSIENT . '_limited';
+	public const UNINDEXED_LIMITED_COUNT_TRANSIENT = self::UNINDEXED_COUNT_TRANSIENT . '_limited';
 
 	/**
 	 * Builds a query for selecting the ID's of unindexed posts.
@@ -58,7 +58,7 @@ abstract class Abstract_Indexing_Action implements Indexation_Action_Interface, 
 
 		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Function get_count_query returns a prepared query.
 		$unindexed_object_ids = $this->wpdb->get_col( $query );
-		$count                = (int) count( $unindexed_object_ids );
+		$count                = (int) \count( $unindexed_object_ids );
 
 		\set_transient( static::UNINDEXED_LIMITED_COUNT_TRANSIENT, $count, ( \MINUTE_IN_SECONDS * 15 ) );
 
@@ -76,6 +76,10 @@ abstract class Abstract_Indexing_Action implements Indexation_Action_Interface, 
 			return (int) $transient;
 		}
 
+		// Store transient before doing the query so multiple requests won't make multiple queries.
+		// Only store this for 15 minutes to ensure that if the query doesn't complete a wrong count is not kept too long.
+		\set_transient( static::UNINDEXED_COUNT_TRANSIENT, 0, ( \MINUTE_IN_SECONDS * 15 ) );
+
 		$query = $this->get_count_query();
 
 		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Function get_count_query returns a prepared query.
@@ -86,6 +90,13 @@ abstract class Abstract_Indexing_Action implements Indexation_Action_Interface, 
 		}
 
 		\set_transient( static::UNINDEXED_COUNT_TRANSIENT, $count, \DAY_IN_SECONDS );
+
+		/**
+		 * Action: 'wpseo_indexables_unindexed_calculated' - sets an option to timestamp when there are no unindexed indexables left.
+		 *
+		 * @internal
+		 */
+		\do_action( 'wpseo_indexables_unindexed_calculated', static::UNINDEXED_COUNT_TRANSIENT, $count );
 
 		return (int) $count;
 	}
