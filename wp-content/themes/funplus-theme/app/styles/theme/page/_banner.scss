@@ -2034,7 +2034,7 @@
     justify-content: center;
   }
   .game-logo {
-    text-align: center;
+    text-align: left;
   }
   .game-logo img {
     width: 60%;
@@ -2042,7 +2042,7 @@
     @include media-breakpoint-up-width(lg) {
       margin-bottom: 20px;
       width: auto;
-      max-width: 400px;
+      max-width: 300px;
     }
   }
   .banner__inner {
@@ -2064,7 +2064,10 @@
       transform: translateX(0%);
     }
     .link {
-      margin: 0 10px;
+      margin: 5px;
+      @include media-breakpoint-up-width(lg) {
+        margin: 10px;
+      }
       img {
         height: 30px;
         width: auto;
@@ -2073,7 +2076,7 @@
           transform: translateY(-5px);
         }
         @include media-breakpoint-up-width(lg) {
-          height: 60px;
+          height: 50px;
           width: auto;
         }
       }

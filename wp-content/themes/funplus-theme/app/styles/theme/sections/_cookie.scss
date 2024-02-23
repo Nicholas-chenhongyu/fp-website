@@ -89,18 +89,16 @@
     }
   }
 }
-// cookie bot
+
 /* Branding on the banner */
 a#CybotCookiebotDialogPoweredbyCybot,
 div#CybotCookiebotDialogPoweredByText {
   display: none;
 }
-
 /* Branding on the Privacy trigger */
 #CookiebotWidget .CookiebotWidget-body .CookiebotWidget-main-logo {
   display: none;
 }
-
 /* Remove branding on cookie settings */
 #CookiebotWidget-widgetContent .CookiebotWidget-main-logo {
   display: none !important;
