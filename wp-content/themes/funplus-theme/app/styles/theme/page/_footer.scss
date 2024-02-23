@@ -118,7 +118,7 @@
   &__bottom {
     display: block;
     list-style: none;
-    margin: 24px 0 0;
+    margin: 40px 0 0;
     padding: 0;
 
     li {
@@ -194,7 +194,7 @@
 }
 .footer {
   .social-icons {
-    padding-top: 20px;
+    padding-top: 40px;
     display: flex;
     @include media-breakpoint-up-width(lg) {
       justify-content: center;

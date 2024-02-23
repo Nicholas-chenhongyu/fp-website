@@ -37,7 +37,7 @@
       }
       p {
         text-align: center;
-        font-size: .8rem;
+        font-size: 0.8rem;
         line-height: 1rem;
         @include media-breakpoint-up-width(md) {
           font-size: 1rem;
@@ -88,4 +88,20 @@
       }
     }
   }
+}
+// cookie bot
+/* Branding on the banner */
+a#CybotCookiebotDialogPoweredbyCybot,
+div#CybotCookiebotDialogPoweredByText {
+  display: none;
+}
+
+/* Branding on the Privacy trigger */
+#CookiebotWidget .CookiebotWidget-body .CookiebotWidget-main-logo {
+  display: none;
+}
+
+/* Remove branding on cookie settings */
+#CookiebotWidget-widgetContent .CookiebotWidget-main-logo {
+  display: none !important;
 }

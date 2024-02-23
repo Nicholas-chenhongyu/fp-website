@@ -16,6 +16,8 @@
   <link rel="preload" href="/wp-content/themes/funplus-theme/public/webfonts/D-DIN.ttf" as="font" crossorigin>
   <link rel="preload" href="/wp-content/themes/funplus-theme/public/webfonts/D-DINExp.ttf" as="font" crossorigin>
 
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="96434a39-097d-4114-b9c9-4ae669d2f722" data-blockingmode="auto" type="text/javascript"></script>
+
   <!-- Google Tag Manager -->
   <script>
     (function(w, d, s, l, i) {

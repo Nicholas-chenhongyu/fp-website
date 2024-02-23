@@ -12,8 +12,6 @@ $show_map = get_field('show_map');
   get_template_part('template-parts/global/map');
 endif; ?>
 
-<?php get_template_part('template-parts/global/cookie'); ?>
-
 
 <footer class="footer wow" data-wow-offset="100">
   <div class="container container-sm">
@@ -25,13 +23,14 @@ endif; ?>
     </div>
     <?php get_template_part('template-parts/global/social-icons', 'null', ['show_labels' => false, 'color' => '#fff', 'alt_color' => '#000000']); ?>
     <ul class="footer__bottom">
+      <li class="fadeIn">&copy; <?php echo get_bloginfo('name'); ?> <?php echo date('Y'); ?></li>
       <?php if ($privacy_link) : ?>
         <li class="fadeIn"><a href="<?php echo esc_url($privacy_link['url']); ?>" target="<?php echo esc_attr($privacy_link['target']); ?>"><?php echo $privacy_link['title']; ?></a></li>
       <?php endif; ?>
-      <li class="fadeIn">&copy; <?php echo get_bloginfo('name'); ?> <?php echo date('Y'); ?></li>
       <?php if ($tcs_link) : ?>
         <li class="fadeIn"><a href="<?php echo esc_url($tcs_link['url']); ?>" target="<?php echo esc_attr($tcs_link['target']); ?>"><?php echo $tcs_link['title']; ?></a></li>
       <?php endif; ?>
+      <li class="fadeIn"><a href="<?php echo get_site_url() . "/cookies-policy"; ?>" target="_self">Cookie Policy</a></li>
     </ul>
   </div>
 </footer>
