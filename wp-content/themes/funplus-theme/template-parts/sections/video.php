@@ -7,13 +7,15 @@
 
 $video = get_sub_field('video');
 
+$ratio = get_sub_field('ratio') ? "ratio" : "";
+
 if (empty($video)) return;
 
 // Spacing
 $spacing = get_sub_field('section_spacing') ? 'section-spacing' : 'no-section-spacing'; ?>
 
 <section class="section video-block wow <?php echo $spacing; ?>">
-    <div class="video-block__video fadeIn">
-        <?php echo $video; ?>
-    </div>
+  <div class="video-block__video fadeIn <?php echo $ratio; ?>">
+    <?php echo $video; ?>
+  </div>
 </section>
