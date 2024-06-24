@@ -671,3 +671,34 @@ function add_id_to_heading($content)
     return $content;
 }
 add_filter('acf_the_content', 'add_id_to_heading');
+
+
+/**
+ * Change ACF field to be read-only.
+ *
+ * @param array $field Field attributes.
+ *
+ * @return array
+ */
+function acf_read_only_field($field)
+{
+
+    if ('soc_comic_reader_clicks' === $field['name']) {
+        $field['disabled'] = true;
+    }
+
+    return $field;
+}
+
+add_filter('acf/load_field', 'acf_read_only_field');
+
+// Track Clicks
+
+add_action('wp_ajax_nopriv_updateReads', 'updateReads');
+add_action('wp_ajax_updateReads', 'updateReads');
+
+function updateReads()
+{
+    $count = get_field('field_667924a1b4c25');
+    update_field('field_667924a1b4c25', $count + 1);
+}

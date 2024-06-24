@@ -943,3 +943,16 @@ $(document).ready(() => {
 		}
 	});
 });
+
+function trackReaderClicks() {
+	const btn = document.querySelector("#soc-comic");
+	btn.on("click", function () {
+		$.ajax({
+			type: "post",
+			url: ajax_url,
+			data: {
+				action: "updateReads",
+			},
+		});
+	});
+}
