@@ -944,9 +944,10 @@ $(document).ready(() => {
 	});
 });
 
-function trackReaderClicks() {
+function initTrackReaderClicks() {
 	const btn = document.querySelector("#soc-comic");
-	btn.on("click", function () {
+	btn.addEventListener("click", function () {
+		console.log("triggered");
 		$.ajax({
 			type: "post",
 			url: ajax_url,

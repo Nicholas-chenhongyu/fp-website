@@ -699,6 +699,6 @@ add_action('wp_ajax_updateReads', 'updateReads');
 
 function updateReads()
 {
-    $count = get_field('field_667924a1b4c25');
-    update_field('field_667924a1b4c25', $count + 1);
+    $count = get_field('field_667924a1b4c25', 'option');
+    update_field('field_667924a1b4c25', $count + 1, 'option');
 }
