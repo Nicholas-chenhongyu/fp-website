@@ -1,0 +1,92 @@
+.progress-bar-block {
+    position: relative;
+    z-index: 2 !important;
+    padding: 44px 0;
+    .container-progress {
+        background-color: #e0e0e0;
+        border-radius: 30px;
+        padding: 44px;
+    }
+
+    &.progress-block-bg {
+        padding: 44px 0;
+
+        &::before {
+            display: none;
+            content: "";
+            width: calc(100% - (146px - 32px));
+            height: 600px;
+            background-color: rgba($grey, 0.4);
+            position: absolute;
+            z-index: -1;
+            right: -32px;
+            top: 50%;
+            @include borderRadius(32px);
+            @include transform(skew(-6deg) translateY(-50%));
+        }
+    }
+    .custom-progress-bar {
+        --bar-height: 30px;
+        --bar-radius: calc(var(--bar-height) / 2);
+        --icon-size: 60px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        .progress-outer-container {
+            background: #000000;
+            height: var(--bar-height);
+            border-radius: var(--bar-radius);
+            .progress-inner-container {
+                height: var(--bar-height);
+                border-radius: var(--bar-radius);
+                background-color: $orange;
+                min-width: var(--icon-size);
+                max-width: 100%;
+                position: relative;
+                .icon {
+                    display: block;
+                    width: var(--icon-size);
+                    height: var(--icon-size);
+                    position: absolute;
+                    right: calc((var(--bar-height) - var(--icon-size)) / 2);
+                    margin-top: calc((var(--bar-height) - var(--icon-size)) / 2);
+                    border-radius: calc(var(--icon-size) / 2);
+                }
+            }
+        }
+    }
+    form {
+        padding: 32px 0;
+        input {
+            border-radius: 20px;
+            background-color: #ffffff;
+            color: #000 !important;
+        }
+        label {
+            color: #000;
+        }
+        .form-control:focus {
+            background: #ffffff;
+        }
+        .form-submit {
+            justify-content: center;
+        }
+        .btn {
+            padding: 12px 50px;
+            background: $orange;
+            border-radius: 25px;
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+    @include media-breakpoint-up-width(lg) {
+        padding: 74px 0;
+
+        &.progress-block-bg {
+            padding: 74px 0;
+
+            &::before {
+                display: block;
+            }
+        }
+    }
+}

@@ -128,6 +128,30 @@ function fp_custom_post_types()
             'slug'        => 'games'
         ]
     ]);
+    register_post_type('comic', [
+        'labels'         => [
+            'name'               => _x('Comic', 'post type general name'),
+            'singular_name'      => _x('Comic', 'post type singular name'),
+            'add_new'            => _x('Add New', 'game'),
+            'add_new_item'       => __('Add New Game'),
+            'edit_item'          => __('Edit Game'),
+            'new_item'           => __('New Game'),
+            'all_items'          => __('All Games'),
+            'view_item'          => __('View Game'),
+            'search_items'       => __('Search Games'),
+            'not_found'          => __('No Games found'),
+            'not_found_in_trash' => __('No Games found in the Trash'),
+            'menu_name'          => __('Comic Entry'),
+        ],
+        'public'        => true,
+        'menu_position' => 5,
+        'supports'      => ['title', 'thumbnail', 'excerpt'],
+        'has_archive'   => false,
+        'rewrite'         => [
+            'with_front' => false,
+            'slug'        => 'comic'
+        ]
+    ]);
 
     register_post_type('studio', [
         'labels'         => [
@@ -699,6 +723,7 @@ add_action('wp_ajax_updateReads', 'updateReads');
 
 function updateReads()
 {
+    // Update SOC reads
     $count = get_field('field_667924a1b4c25', 'option');
     update_field('field_667924a1b4c25', $count + 1, 'option');
 }

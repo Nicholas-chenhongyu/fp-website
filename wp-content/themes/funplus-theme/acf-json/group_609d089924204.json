@@ -6,6 +6,7 @@
             "key": "field_609d08a2bca36",
             "label": "Sections",
             "name": "sections",
+            "aria-label": "",
             "type": "flexible_content",
             "instructions": "Add, edit, re-order or remove a section.",
             "required": 0,
@@ -26,6 +27,7 @@
                             "key": "field_60c09f93ad613",
                             "label": "Heading",
                             "name": "heading",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -47,6 +49,7 @@
                             "key": "field_60ccb75fa76ff",
                             "label": "Settings",
                             "name": "settings",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -78,6 +81,7 @@
                             "key": "field_60c0c9e042064",
                             "label": "Subheading",
                             "name": "subheading",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -99,16 +103,49 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_60c0e89e51249": {
-                    "key": "layout_60c0e89e51249",
+                "layout_669f8f5be4bce": {
+                    "key": "layout_669f8f5be4bce",
+                    "name": "progress",
+                    "label": "Progress",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_669f8f63e4bd1",
+                            "label": "Progress",
+                            "name": "progress",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_669f8eb0259f1"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_65a4eae4adb2d": {
+                    "key": "layout_65a4eae4adb2d",
                     "name": "content",
                     "label": "Content",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60c0e8a25124a",
+                            "key": "field_65a4eaf0adb2f",
                             "label": "Content",
                             "name": "content",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -140,6 +177,7 @@
                             "key": "field_60c87677d6152",
                             "label": "Cards",
                             "name": "cards",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -171,6 +209,7 @@
                             "key": "field_6475ab875c6e8",
                             "label": "Button",
                             "name": "button",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -202,6 +241,7 @@
                             "key": "field_60a25526d5227",
                             "label": "About",
                             "name": "about",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -233,6 +273,7 @@
                             "key": "field_60be1e5f2327b",
                             "label": "Image Strip",
                             "name": "image_strip",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -264,6 +305,7 @@
                             "key": "field_60d5be46a3cbb",
                             "label": "FAQs",
                             "name": "faqs",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -295,6 +337,7 @@
                             "key": "field_60c1f14a5b0cd",
                             "label": "Slider",
                             "name": "slider",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -326,6 +369,7 @@
                             "key": "field_60be353304333",
                             "label": "News",
                             "name": "news",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -357,6 +401,7 @@
                             "key": "field_64141829f48d0",
                             "label": "Press",
                             "name": "press",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -388,6 +433,7 @@
                             "key": "field_64141a8aee3bb",
                             "label": "Awards",
                             "name": "awards",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -419,6 +465,7 @@
                             "key": "field_62fdaca14f5d2",
                             "label": "Privacy Policies",
                             "name": "privacy_policies",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -450,6 +497,7 @@
                             "key": "field_6417fe320cd2c",
                             "label": "People",
                             "name": "people",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -481,6 +529,7 @@
                             "key": "field_60a29f6bb8790",
                             "label": "Games",
                             "name": "games",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -502,6 +551,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_669f667ff24ce": {
+                    "key": "layout_669f667ff24ce",
+                    "name": "custom_slider",
+                    "label": "Custom Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_669f6699f24d1",
+                            "label": "Slides",
+                            "name": "slides",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_669f65899230c"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_60c0a7ab68bab": {
                     "key": "layout_60c0a7ab68bab",
                     "name": "statistics",
@@ -512,6 +593,7 @@
                             "key": "field_60c0a7ed68bac",
                             "label": "Statistics",
                             "name": "statistics",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -543,6 +625,7 @@
                             "key": "field_60ccbf0daab7d",
                             "label": "Services",
                             "name": "services",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -574,6 +657,7 @@
                             "key": "field_60c0c44a2752f",
                             "label": "Video",
                             "name": "video",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -605,6 +689,7 @@
                             "key": "field_60c3d96a44917",
                             "label": "Facts",
                             "name": "facts",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -636,6 +721,7 @@
                             "key": "field_60c9f85215adc",
                             "label": "Key Points",
                             "name": "key_points",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -667,6 +753,7 @@
                             "key": "field_60c76ead77ec2",
                             "label": "Games List",
                             "name": "games_list",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -698,6 +785,7 @@
                             "key": "field_64143faecab04",
                             "label": "Partnerships List",
                             "name": "partnerships_list",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -729,6 +817,7 @@
                             "key": "field_6389987527db6",
                             "label": "Games List Select",
                             "name": "games_list_select",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -760,6 +849,7 @@
                             "key": "field_62086666fbf0f",
                             "label": "Careers List",
                             "name": "careers_list",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -791,6 +881,7 @@
                             "key": "field_64098b4debcda",
                             "label": "Info List",
                             "name": "info_list",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -822,6 +913,7 @@
                             "key": "field_60c613df6a24f",
                             "label": "Locations",
                             "name": "world_map",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -853,6 +945,7 @@
                             "key": "field_60d9eec3cb5d8",
                             "label": "Featured Image",
                             "name": "featured_image",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -884,6 +977,7 @@
                             "key": "field_60ca168a0b599",
                             "label": "Support",
                             "name": "support",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -915,6 +1009,7 @@
                             "key": "field_60d48222334fc",
                             "label": "Employee",
                             "name": "employee",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -946,6 +1041,7 @@
                             "key": "field_60caff6387acf",
                             "label": "Social",
                             "name": "social",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -977,6 +1073,7 @@
                             "key": "field_60d661aa0bbe4",
                             "label": "Contact",
                             "name": "contact",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -1008,6 +1105,7 @@
                             "key": "field_60be2fc369d40",
                             "label": "Global Block",
                             "name": "block",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -1039,6 +1137,7 @@
                             "key": "field_619df0fc26fbb",
                             "label": "Timeline",
                             "name": "block",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -1070,6 +1169,7 @@
                             "key": "field_619de059319a8",
                             "label": "Management Block",
                             "name": "block",
+                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -1092,9 +1192,9 @@
                     "max": ""
                 }
             },
-            "button_label": "Add Section",
             "min": "",
-            "max": ""
+            "max": "",
+            "button_label": "Add Section"
         }
     ],
     "location": [
@@ -1174,6 +1274,13 @@
                 "operator": "==",
                 "value": "game_update"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "comic"
+            }
         ]
     ],
     "menu_order": 0,
@@ -1184,5 +1291,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1685433263
+    "show_in_rest": 0,
+    "modified": 1721732999
 }

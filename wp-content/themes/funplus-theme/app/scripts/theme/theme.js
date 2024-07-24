@@ -944,16 +944,17 @@ $(document).ready(() => {
 	});
 });
 
-function initTrackReaderClicks() {
-	const btn = document.querySelector("#soc-comic");
-	btn.addEventListener("click", function () {
-		console.log("triggered");
-		$.ajax({
-			type: "post",
-			url: ajax_url,
-			data: {
-				action: "updateReads",
-			},
+function initTrackReaderClicks(trackContainer) {
+	const container = document.querySelector(`#${trackContainer}`);
+	container &&
+		container.addEventListener("click", function () {
+			console.log("triggered");
+			$.ajax({
+				type: "post",
+				url: ajax_url,
+				data: {
+					action: "updateReads",
+				},
+			});
 		});
-	});
 }
