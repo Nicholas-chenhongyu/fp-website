@@ -3,9 +3,58 @@
     "title": "Banner - Fullwidth",
     "fields": [
         {
+            "key": "field_66a0cb4811156",
+            "label": "Extra Logo",
+            "name": "extra_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_66a0cc8294de4",
+            "label": "Extra Logo Link",
+            "name": "extra_logo_link",
+            "aria-label": "",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "comic"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "allow_archives": 0,
+            "multiple": 0,
+            "allow_null": 0
+        },
+        {
             "key": "field_65810388e23b6",
             "label": "Heading",
             "name": "heading",
+            "aria-label": "",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -27,6 +76,7 @@
             "key": "field_658103f4e23b7",
             "label": "Text",
             "name": "banner_text",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -46,6 +96,7 @@
             "key": "field_65810426e23b8",
             "label": "Background Image",
             "name": "banner_img",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -94,5 +145,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1703816355
+    "show_in_rest": 0,
+    "modified": 1721814213
 }
