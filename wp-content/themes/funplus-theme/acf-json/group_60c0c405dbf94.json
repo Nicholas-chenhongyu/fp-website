@@ -6,6 +6,7 @@
             "key": "field_60c0c40b3eb44",
             "label": "Video",
             "name": "video",
+            "aria-label": "",
             "type": "oembed",
             "instructions": "Paste in your Vimeo or YouTube video URL here.",
             "required": 0,
@@ -19,9 +20,30 @@
             "height": ""
         },
         {
+            "key": "field_6638415a6a2e4",
+            "label": "Keep Aspect Ratio as 16:9",
+            "name": "ratio",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
             "key": "field_60d5a699d4aae",
             "label": "Spacing",
             "name": "spacing",
+            "aria-label": "",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -57,5 +79,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1670575716
+    "show_in_rest": 0,
+    "modified": 1714962815
 }
