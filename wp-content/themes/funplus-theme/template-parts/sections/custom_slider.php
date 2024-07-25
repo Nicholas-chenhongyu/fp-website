@@ -28,7 +28,7 @@ $spacing = get_sub_field('section_spacing') ? 'section-spacing' : 'no-section-sp
                                 <?php echo wp_get_attachment_image($slide['background_image'], 'full', '', ['class' => 'games-slider__game__image']); ?>
                             <?php endif; ?>
                             <div class="games-slider-alt__game__inner">
-                                <p class="games-slider-alt__game__title h4"><?php echo get_the_title($slide['title']); ?></p>
+                                <p class="games-slider-alt__game__title h4"><?php echo $slide['title']; ?></p>
                             </div>
                         </a>
                     <?php endforeach; ?>
