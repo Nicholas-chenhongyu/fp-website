@@ -13,13 +13,6 @@ $show_map = get_field('show_map');
 endif; ?>
 
 
-<script type="text/javascript">
-    jQuery(document).ready(() => {
-        initTrackReaderClicks()
-    });
-</script>
-
-
 <footer class="footer wow" data-wow-offset="100">
     <div class="container container-sm">
         <div class="footer-contact">
