@@ -166,22 +166,14 @@
                     .sub-menu {
                         position: relative;
                         top: 0;
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            top: 0;
-                            left: 50%;
-                            height: 1px;
-                            width: 50px;
-                            border-top: 1px dashed #d8d8d8;
-                            -webkit-transform: translateX(-50%);
-                            -moz-transform: translateX(-50%);
-                            -ms-transform: translateX(-50%);
-                            -o-transform: translateX(-50%);
-                            transform: translateX(-50%);
-                        }
                         .menu-item {
                             padding-top: 0;
+                            a {
+                                color: #787878;
+                                &:hover {
+                                    color: $orange;
+                                }
+                            }
                         }
                     }
                 }
