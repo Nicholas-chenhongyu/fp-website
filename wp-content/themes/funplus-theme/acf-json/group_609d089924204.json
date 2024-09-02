@@ -135,6 +135,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_66d521bb3366e": {
+                    "key": "layout_66d521bb3366e",
+                    "name": "bookshelf",
+                    "label": "Bookshelf",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66d521ca33671",
+                            "label": "Bookshelf",
+                            "name": "bookshelf",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_66d5215cbc40d"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_65a4eae4adb2d": {
                     "key": "layout_65a4eae4adb2d",
                     "name": "content",
@@ -1292,5 +1324,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721732999
+    "modified": 1725243881
 }
