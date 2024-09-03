@@ -134,6 +134,11 @@
                 "param": "post_template",
                 "operator": "!=",
                 "value": "page-no-sidebar.php"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "page-bravo.php"
             }
         ]
     ],
@@ -146,5 +151,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721814213
+    "modified": 1725330591
 }
