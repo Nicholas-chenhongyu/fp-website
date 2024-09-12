@@ -18,8 +18,7 @@ get_header();
             (event) => {
                 if (event.origin !== "https://bravo-games.com") return;
 
-                const ratio = event.data.height / event.data.width;
-                document.querySelector('#bravo').setAttribute("height", window.innerWidth * ratio + 'px')
+                document.querySelector('#bravo').setAttribute("height", event.data.height + 'px')
             },
             false,
         );

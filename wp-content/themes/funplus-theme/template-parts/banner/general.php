@@ -24,13 +24,15 @@ $height = empty($bg_image) ? 'fixed-height' : '';
             <div class="banner__inner">
                 <div class="banner__main fixed-height">
                     <div class="banner__main__content">
-                        <div class="banner__extra_logo">
-                            <a href="<?php echo $extra_logo_link; ?>">
-                                <?php if (!empty($extra_logo)) : ?>
-                                    <?= wp_get_attachment_image($extra_logo, 'full', false, ['class' => 'fadeIn']); ?>
-                                <?php endif; ?>
-                            </a>
-                        </div>
+                        <?php if ($extra_logo) : ?>
+                            <div class="banner__extra_logo">
+                                <a href="<?php echo $extra_logo_link; ?>">
+                                    <?php if (!empty($extra_logo)) : ?>
+                                        <?= wp_get_attachment_image($extra_logo, 'full', false, ['class' => 'fadeIn']); ?>
+                                    <?php endif; ?>
+                                </a>
+                            </div>
+                        <?php endif; ?>
                         <?php get_template_part('template-parts/banner/parts/heading'); ?>
 
                         <?php if (!empty($text)) : ?>
