@@ -564,27 +564,36 @@ function initLoadMore(section_id) {
 }
 
 function initHiddenCodeSubmit() {
-	const currentLore = $(".lore-current");
+	const currentLore = $(".lore-current").find(".lore-inner");
 	const loreForm = $(".hidden-code-form");
+
+	let can_submit = true;
 
 	loreForm.on("submit", function (e) {
 		e.preventDefault();
 		const formData = $(this).serialize();
-		console.log(formData);
 
-		$.ajax({
-			type: "post",
-			url: ajax_url,
-			dataType: "json",
-			data: formData,
-			success: function (msg) {
-				console.log(msg);
-			},
-			error: function (data) {
-				console.log("An error occurred.");
-				console.log(data);
-			},
-		});
+		if (can_submit) {
+			$.ajax({
+				type: "post",
+				url: ajax_url,
+				data: formData,
+				beforeSend: function () {
+					can_submit = false;
+				},
+				success: function (response) {
+					can_submit = true;
+					if (response !== "false") {
+						currentLore.replaceWith(response);
+					} else {
+						alert("Invalid code");
+					}
+				},
+				error: function (data) {
+					console.log("An error occurred.");
+				},
+			});
+		}
 
 		return false;
 	});

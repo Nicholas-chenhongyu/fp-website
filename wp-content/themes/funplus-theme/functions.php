@@ -414,14 +414,33 @@ add_action('wp_ajax_nopriv_hidden_code_submit', 'fp_hidden_code_submit');
 add_action('wp_ajax_hidden_code_submit', 'fp_hidden_code_submit');
 function fp_hidden_code_submit()
 {
-
-    $code = $_REQUEST['code'];
+    $code_submit = $_REQUEST['code'];
+    $current_lore = $_REQUEST['current_lore'];
     $nonce = $_REQUEST['form_nonce'];
 
     if (! wp_verify_nonce($nonce, 'hidden_code_nonce')) {
         exit('The form is not valid');
     }
-    echo $code;
+    $code = [
+        1 => 'Griffin',
+        2 => 'Corpsehead cove',
+        3 => 'Whispershell',
+        4 => 'The eye sees through time',
+        5 => 'Ancient order',
+        6 => 'Fxxxxx',
+        7 => 'Gxxxxx',
+        8 => 'Hxxxxx',
+        9 => 'Ixxxxx',
+        10 => 'Jxxxxx'
+    ];
+    if (strtolower($code_submit) === strtolower($code[$current_lore])) {
+        get_template_part('template-parts/objects/lore', 'item', [
+            'status' => 'unlocked',
+            'id' => $current_lore
+        ]);
+    } else {
+        echo 'false';
+    }
     wp_die();
 }
 

@@ -9,8 +9,15 @@
         @include media-breakpoint-up-width(md) {
             margin-bottom: 0px;
         }
+        .description {
+            font-weight: bold;
+            line-height: 1.2rem;
+        }
         h4 {
             color: #ff5a00;
+            @media (min-width: 576px) {
+                font-size: 1.9rem;
+            }
         }
         form {
             padding: 32px 0 0;
@@ -56,6 +63,13 @@
             min-width: 100px;
             img {
                 max-width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            &.lore-locked {
+                a {
+                    cursor: not-allowed;
+                }
             }
         }
     }
@@ -70,4 +84,8 @@
             }
         }
     }
+}
+
+.sections .section.hidden-code-section {
+    margin-bottom: 20px !important;
 }

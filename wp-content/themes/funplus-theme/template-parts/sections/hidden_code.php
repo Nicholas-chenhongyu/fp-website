@@ -37,6 +37,7 @@ $loreStatus[$loreCurrent] = 'current';
                         <form class="hidden-code-form" method="post" action="">
                             <div class="form-group">
                                 <input class="form-control" type="text" name="code" placeholder="Type your hidden code">
+                                <input type="hidden" name="current_lore" value="<?php echo $loreCurrent; ?>">
                                 <input type="hidden" name="form_nonce" value="<?php echo esc_attr(wp_create_nonce('hidden_code_nonce')); ?>">
                                 <input type="hidden" name="action" value="hidden_code_submit" />
                             </div>

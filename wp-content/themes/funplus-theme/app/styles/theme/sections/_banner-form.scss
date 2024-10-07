@@ -4,6 +4,7 @@
     .banner-block {
         height: 100%;
         margin-bottom: 20px;
+        padding-bottom: 20px;
         img {
             max-width: 100%;
             border-radius: 30px;
@@ -12,6 +13,7 @@
         }
         @include media-breakpoint-up-width(md) {
             margin-bottom: 0px;
+            padding-bottom: 0;
         }
     }
     .form-block {
@@ -19,6 +21,11 @@
         background-color: #ff5a00;
         padding: 44px;
         border-radius: 30px;
+        h4 {
+            @media (min-width: 576px) {
+                font-size: 1.9rem;
+            }
+        }
         form {
             padding: 12px 0 0;
             input {
@@ -47,7 +54,7 @@
                 label {
                     span {
                         font-size: 12px;
-                        line-height: 1.4rem;
+                        line-height: 1rem;
                         a {
                             color: #ffffff;
                         }
@@ -56,10 +63,14 @@
             }
             @media (min-width: 576px) {
                 .form-group {
-                    margin-top: 15px;
+                    margin-bottom: 15px;
                 }
             }
         }
+    }
+    margin-top: 20px !important;
+    @include media-breakpoint-up-width(md) {
+        margin-top: 0;
     }
     @include media-breakpoint-up-width(lg) {
         padding: 0 0 74px;

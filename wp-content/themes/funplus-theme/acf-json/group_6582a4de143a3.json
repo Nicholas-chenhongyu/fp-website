@@ -173,6 +173,23 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_6703c2d760599",
+            "label": "Comic",
+            "name": "comic_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -200,5 +217,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721620698
+    "modified": 1728299749
 }
