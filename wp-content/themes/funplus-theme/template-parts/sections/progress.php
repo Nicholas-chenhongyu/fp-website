@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Heading
- * Displays the heading but as its own block.
+ * Progress
+ * Displays the progress bar block
  */
 
 // Heading

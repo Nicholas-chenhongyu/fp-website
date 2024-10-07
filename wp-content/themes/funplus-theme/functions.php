@@ -408,6 +408,24 @@ function fp_ajax_load_more()
 }
 
 /**
+ * Hidden Code Submit
+ */
+add_action('wp_ajax_nopriv_hidden_code_submit', 'fp_hidden_code_submit');
+add_action('wp_ajax_hidden_code_submit', 'fp_hidden_code_submit');
+function fp_hidden_code_submit()
+{
+
+    $code = $_REQUEST['code'];
+    $nonce = $_REQUEST['form_nonce'];
+
+    if (! wp_verify_nonce($nonce, 'hidden_code_nonce')) {
+        exit('The form is not valid');
+    }
+    echo $code;
+    wp_die();
+}
+
+/**
  * wp_nav_menu CSS classes
  * Add animations to the mobile nav
  */

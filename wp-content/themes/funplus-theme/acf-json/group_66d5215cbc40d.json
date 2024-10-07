@@ -18,9 +18,9 @@
             },
             "message": "",
             "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "ui_on_text": "Show",
+            "ui_off_text": "Hidden",
+            "ui": 1
         }
     ],
     "location": [
@@ -41,5 +41,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1725243814
+    "modified": 1727708043
 }

@@ -563,6 +563,33 @@ function initLoadMore(section_id) {
 	});
 }
 
+function initHiddenCodeSubmit() {
+	const currentLore = $(".lore-current");
+	const loreForm = $(".hidden-code-form");
+
+	loreForm.on("submit", function (e) {
+		e.preventDefault();
+		const formData = $(this).serialize();
+		console.log(formData);
+
+		$.ajax({
+			type: "post",
+			url: ajax_url,
+			dataType: "json",
+			data: formData,
+			success: function (msg) {
+				console.log(msg);
+			},
+			error: function (data) {
+				console.log("An error occurred.");
+				console.log(data);
+			},
+		});
+
+		return false;
+	});
+}
+
 function switchNews(section_id) {
 	const thisBtn = $("#" + section_id).find("button.load-more");
 	const thisTarget = $("#" + section_id).find(".load-more-target");
