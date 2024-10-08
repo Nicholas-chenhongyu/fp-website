@@ -585,7 +585,7 @@ function initHiddenCodeSubmit() {
 					if (response !== "false") {
 						currentLore.replaceWith(response);
 						alert(
-							"CORRECT CODE ENTERED! \nYou’ve successfully unlocked a chapter of an exclusive Sea of Conquest Chronicles story. Click the open parchment to read the unlocked chapter."
+							"CORRECT CODE ENTERED! \nYou’ve successfully unlocked a chapter of an exclusive Sea of Conquest Chronicles story. \nClick the open parchment to read the unlocked chapter."
 						);
 					} else {
 						alert("Invalid code");

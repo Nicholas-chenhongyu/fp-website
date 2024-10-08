@@ -764,3 +764,16 @@ function updateReads()
     $count = get_field('field_667924a1b4c25', 'option');
     update_field('field_667924a1b4c25', $count + 1, 'option');
 }
+
+// comic use custom permalinks
+
+function custom_permalink($post_type)
+{
+    // Replace 'custompost' with your post type name
+    if ('comic' === $post_type) {
+        return '__false';
+    }
+
+    return '__true';
+}
+add_filter('custom_permalinks_exclude_post_type', 'custom_permalink');
