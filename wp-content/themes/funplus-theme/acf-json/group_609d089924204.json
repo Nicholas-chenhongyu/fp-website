@@ -1377,6 +1377,13 @@
                 "operator": "==",
                 "value": "comic"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page_studio"
+            }
         ]
     ],
     "menu_order": 0,
@@ -1388,5 +1395,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728274384
+    "modified": 1728543215
 }

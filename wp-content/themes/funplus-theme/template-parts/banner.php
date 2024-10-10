@@ -9,16 +9,19 @@ $mapping = get_field('page_mapping', 'option'); ?>
 <div class="banner-wrapper wow fadeIn">
 
     <?php
-    // Blog page
+
+    $original_banner_list = ['post', 'insider_info', 'awards', 'partnership', 'people', 'game_update'];
+    $game_banner_list = ['game', 'comic', 'ourstudio'];
+    $current_post_type = get_post_type();
+
     if (is_home()) {
+        // Newsroom page
         get_template_part('template-parts/banner/news');
-    } else if (is_singular('post') || is_singular('insider_info') || is_singular('awards') || is_singular('partnership') || is_singular('people') || is_singular('game_update')) {
-        // News Single
+    } else if (in_array($current_post_type, $original_banner_list)) {
+        // Templates using original post banner
         get_template_part('template-parts/banner/news-single');
-    } else if (is_singular('game') || is_singular('comic')) {
-        get_template_part('template-parts/banner/game');
     } else {
-        // default 
+        // Default full width banner
         get_template_part('template-parts/banner/general');
     }
 

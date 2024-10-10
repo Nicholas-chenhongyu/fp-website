@@ -5,6 +5,7 @@
  */
 
 // Content
+$type = get_field('logo_or_heading');
 $logo = get_field('game_logo');
 $text = get_field('banner_text');
 $button = get_field('banner_button');
@@ -31,9 +32,13 @@ $height = empty($bg_image) ? 'fixed-height' : '';
             <div class="banner__inner">
                 <div class="banner__main fixed-height">
                     <div class="banner__main__content">
-                        <div class="game-logo">
-                            <?= wp_get_attachment_image($logo, 'full', false, ['class' => 'fadeIn']); ?>
-                        </div>
+                        <?php if ($type === 'heading'):
+                            get_template_part('template-parts/banner/parts/heading');
+                        else : ?>
+                            <div class="game-logo">
+                                <?= wp_get_attachment_image($logo, 'full', false, ['class' => 'fadeIn']); ?>
+                            </div>
+                        <?php endif; ?>
 
                         <?php if (!empty($text)) : ?>
                             <div class="banner-blurb fadeIn">

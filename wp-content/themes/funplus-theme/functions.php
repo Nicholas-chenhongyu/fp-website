@@ -166,7 +166,7 @@ function fp_custom_post_types()
             'search_items'       => __('Search Studios'),
             'not_found'          => __('No Studios found'),
             'not_found_in_trash' => __('No Studios found in the Trash'),
-            'menu_name'          => __('Studios'),
+            'menu_name'          => __('Studios in map'),
         ],
         'public'        => true,
         'menu_position' => 5,
@@ -186,6 +186,32 @@ function fp_custom_post_types()
             'menu_name'          => __('Regions'),
         ],
         'hierarchical' => true
+    ]);
+
+    register_post_type('page_studio', [
+        'labels'         => [
+            'name'               => _x('Page Studios', 'post type general name'),
+            'singular_name'      => _x('Page Studio', 'post type singular name'),
+            'add_new'            => _x('Add New', 'Studio'),
+            'add_new_item'       => __('Add New Studio'),
+            'edit_item'          => __('Edit Studio'),
+            'new_item'           => __('New Studio'),
+            'all_items'          => __('All Studios'),
+            'view_item'          => __('View Studio'),
+            'search_items'       => __('Search Studios'),
+            'not_found'          => __('No Studios found'),
+            'not_found_in_trash' => __('No Studios found in the Trash'),
+            'menu_name'          => __('Page Studios'),
+        ],
+        'public'        => true,
+        'menu_position' => 5,
+        'supports'      => ['title', 'thumbnail', 'excerpt'],
+        'has_archive'   => false,
+        'rewrite'         => [
+            'with_front' => false,
+            'slug'       => 'ourstudios',
+            'pages'      => false
+        ]
     ]);
 
     register_post_type('career', [

@@ -3,11 +3,11 @@
     "title": "Banner - Fullwidth - Game",
     "fields": [
         {
-            "key": "field_6582a4e85b764",
-            "label": "Logo",
-            "name": "game_logo",
+            "key": "field_67075057209c5",
+            "label": "Logo or Heading",
+            "name": "logo_or_heading",
             "aria-label": "",
-            "type": "image",
+            "type": "radio",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,8 +16,40 @@
                 "class": "",
                 "id": ""
             },
+            "choices": {
+                "logo": "Logo",
+                "heading": "Heading"
+            },
+            "default_value": "logo",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_6582a4e85b764",
+            "label": "Logo",
+            "name": "game_logo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67075057209c5",
+                        "operator": "==",
+                        "value": "logo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
             "return_format": "id",
-            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -25,7 +57,38 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_670750cf209c6",
+            "label": "Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_67075057209c5",
+                        "operator": "==",
+                        "value": "heading"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_60dd9b404fdd8"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_6582a50b5b765",
@@ -176,7 +239,7 @@
         },
         {
             "key": "field_6703c2d760599",
-            "label": "Comic",
+            "label": "Comic Link",
             "name": "comic_link",
             "aria-label": "",
             "type": "url",
@@ -195,16 +258,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "game"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "comic"
+                "value": ""
             }
         ]
     ],
@@ -217,5 +273,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728299749
+    "modified": 1728546081
 }
