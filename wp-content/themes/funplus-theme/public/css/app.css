@@ -8795,7 +8795,7 @@ section.press-slider .swiper-slide.swiper-slide-prev {
 }
 @media (min-width: 992px) {
   .section.social .social-icons {
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .section.social .social-icons li {
     margin-bottom: 0;

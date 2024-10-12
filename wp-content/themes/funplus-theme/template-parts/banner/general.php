@@ -21,6 +21,9 @@ $store_link = get_field('store_link');
 $website_link = get_field('website_link');
 $comic_link = get_field('comic_link');
 
+$custom_icon = get_field('custom_icon');
+$custom_link = get_field('custom_link');
+
 
 // Height
 // We need to set a fixed height if there is no featured image set
@@ -143,6 +146,18 @@ $height = empty($bg_image) ? 'fixed-height' : '';
                             echo '</div>';
                         }
                         ?>
+
+                        <!-- Custom -->
+                        <?php
+                        if ($custom_icon) {
+                            echo '<div class="link">';
+                            echo '<a href="' . $custom_link . '" target="_blank">';
+                            echo '<img src="' . wp_get_attachment_url($custom_icon) . '" />';
+                            echo '</a>';
+                            echo '</div>';
+                        }
+                        ?>
+
                     </div>
                 </div>
             </div>

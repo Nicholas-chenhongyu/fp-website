@@ -1,50 +1,50 @@
-.section.social{
+.section.social {
     position: relative;
     z-index: 9;
     margin-bottom: 40px;
 
-    &.section-spacing:not(.hero){
+    &.section-spacing:not(.hero) {
         margin-bottom: 0px !important;
     }
-    .heading{
+    .heading {
         margin-bottom: 60px;
     }
-    .social-icons{
+    .social-icons {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        li{
-            opacity: .8;
+        li {
+            opacity: 0.8;
             margin-bottom: 9px;
 
-            svg{
+            svg {
                 width: 37px;
                 height: 37px;
             }
         }
 
-        @include media-breakpoint-up-width(lg){
-            justify-content: space-between;
+        @include media-breakpoint-up-width(lg) {
+            justify-content: space-around;
 
-            li{
+            li {
                 margin-bottom: 0;
-                svg{
+                svg {
                     width: 92px;
                     height: 92px;
                 }
             }
         }
     }
-    @include media-breakpoint-up-width(lg){
-        &.section-spacing:not(.hero){
+    @include media-breakpoint-up-width(lg) {
+        &.section-spacing:not(.hero) {
             margin-bottom: 80px !important;
         }
 
-        .heading{
+        .heading {
             margin-bottom: 120px;
         }
-        &__icons li svg{
+        &__icons li svg {
             height: auto;
             width: auto;
         }
