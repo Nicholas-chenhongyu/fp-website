@@ -6,7 +6,10 @@
  */
 
 // Content
-$services = get_sub_field('services'); ?>
+$services = get_sub_field('services');
+$two_in_row = get_sub_field('row_two');
+$layoutClass = $two_in_row ? 'col-12 col-md-6 col-lg-4 offset-0' : 'col-12 col-md-6 col-lg-3 offset-0'
+?>
 
 <section class="section services wow" data-wow-offset="70">
     <div class="container">
@@ -37,7 +40,7 @@ $services = get_sub_field('services'); ?>
         <!-- Content -->
         <div class="row">
             <?php for ($i = 0; $i < count($services); $i++) : ?>
-                <div class="col-12 col-md-6 col-lg-3 offset-0 offset-lg-1 grid-item wow">
+                <div class="<?php echo $layoutClass; ?> offset-lg-1 grid-item wow">
                     <div class="services__service" style="--index:<?= $i; ?>">
                         <div class="services__service__icon">
                             <?php echo wp_get_attachment_image($services[$i]['icon'], 'full', '', []); ?>
