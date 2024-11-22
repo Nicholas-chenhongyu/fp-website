@@ -29,32 +29,6 @@ $press = new WP_Query([
     <h3 class="subheading">All Press</h3>
     <div class="container container-sm">
 
-        <!-- Drop Down -->
-        <!-- <div class="timeline__divider timeline__divider--top d-flex mb-5 align-items-center">
-            <hr class="w-100 pb-0">
-            <div class="timeline__pill dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <a href="#" role="button" id="countriesLink">
-                    All Press
-                </a>
-                <div class="news-dropdown careers-locations dropdown-menu" aria-labelledby="countriesLink">
-                    <?php
-                    $terms = get_terms('category', array(
-                        'hide_empty' => false,
-                    ));
-                    if (!empty($terms) && !is_wp_error($terms)) {
-                        echo '<ul>';
-                        foreach ($terms as $term) {
-                            echo '<li class="term" data-term=' . urlencode($term->slug) . '>' . $term->name . '</li>';
-                        }
-                        echo '</ul>';
-                    }
-                    ?>
-                
-                </div>
-            </div>
-            <hr class="w-100 pb-0">
-        </div> -->
-
         <div class="row load-more-target">
             <?php if ($press->have_posts()) : ?>
                 <?php while ($press->have_posts()) : $press->the_post();
@@ -207,7 +181,7 @@ foreach ($cat_list as $cat) :
                 </div>
 
                 <div class="description fadeIn">
-                    <p><span style="font-weight: 400;">Click <a href="https://drive.google.com/drive/folders/1f8WQwTU6AY3etNdBLPuLG0E5Ew_2XAsm?usp=sharing" target="_blank">here</a> to access the Press Kit. This material is intended for press-related use only. Please respect our brand guidelines and instructions of usage within while using the materials. By downloading any of the assets in the FunPlus Press Kit, you agree to our <a href="/press-kit-use-policy/" target="_blank">FunPlus Press Kit Use Policy. </span></p>
+                    <p><span style="font-weight: 400;">For more details or any inquiries you may have, don’t hesitate to reach out to our team at <a href="mailto:press@funplus.com">press@funplus.com</a>. We’re here to help with all your FunPlus needs and look forward to connecting with you!</span></p>
                 </div>
 
             </div>

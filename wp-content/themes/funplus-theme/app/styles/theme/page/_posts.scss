@@ -1,4 +1,4 @@
-.post-loop{
+.post-loop {
     padding-bottom: 91px;
     &.news {
         display: none;
@@ -9,7 +9,7 @@
     .timeline__pill {
         position: relative;
         padding: 10px 80px;
-        &.dropdown-toggle{
+        &.dropdown-toggle {
             a {
                 color: #fff;
                 z-index: 2;
@@ -50,38 +50,37 @@
             }
         }
     }
-    
-    .subheading{
+
+    .subheading {
         padding: 62px 0;
     }
-    &__post{
+    &__post {
         display: block;
         margin-bottom: 42px;
 
-        &__thumbnail{
+        &__thumbnail {
             height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: center;
 
-            @include transition(transform 0.5s ease)
+            @include transition(transform 0.5s ease);
         }
-        &__thumbnailWrapper{
+        &__thumbnailWrapper {
             height: 224px;
             width: 100%;
             margin-bottom: 30px;
-            overflow:hidden;
+            overflow: hidden;
             will-change: transform;
-            
+
             @include borderRadius(16px);
         }
-        &__heading { 
+        &__heading {
             color: $black;
             margin-bottom: 10px;
-            @include transition(color 0.5s ease)
-            
+            @include transition(color 0.5s ease);
         }
-        &__excerpt{
+        &__excerpt {
             color: $grey-alt3;
         }
 
@@ -89,24 +88,34 @@
             .post-loop__post__heading {
                 color: $orange;
             }
-            .post-loop__post__thumbnail{
-                transform: scale(1.05)
+            .post-loop__post__thumbnail {
+                transform: scale(1.05);
             }
         }
     }
 
-
-    .col-12.col-md-6.col-lg-4:nth-child(3n - 2) > a.post-loop__post{
-        @include animationDuration(.8s);
+    .col-12.col-md-6.col-lg-4:nth-child(3n - 2) > a.post-loop__post {
+        @include animationDuration(0.8s);
         @include animationDelay(0s);
     }
-    .col-12.col-md-6.col-lg-4:nth-child(3n - 1) > a.post-loop__post{
-        @include animationDuration(.8s);
-        @include animationDelay(1 * .4s);
+    .col-12.col-md-6.col-lg-4:nth-child(3n - 1) > a.post-loop__post {
+        @include animationDuration(0.8s);
+        @include animationDelay(1 * 0.4s);
     }
-    .col-12.col-md-6.col-lg-4:nth-child(3n) > a.post-loop__post{
-        @include animationDuration(.8s);
-        @include animationDelay(2 * .4s);
+    .col-12.col-md-6.col-lg-4:nth-child(3n) > a.post-loop__post {
+        @include animationDuration(0.8s);
+        @include animationDelay(2 * 0.4s);
     }
-
+    .press {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .date {
+            align-self: flex-start;
+        }
+        .post-loop__post {
+            margin-bottom: 20px;
+        }
+    }
 }
