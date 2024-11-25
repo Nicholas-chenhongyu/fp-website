@@ -26,7 +26,7 @@ $press = new WP_Query([
 
 <!-- Post Loop for all news -->
 <div class="news post-loop all" id="<?php echo esc_attr($loadMore_id); ?>" data-max="<?php echo $press->max_num_pages; ?>">
-    <h3 class="subheading">All Press</h3>
+    <h3 class="subheading">All Press RELEASES</h3>
     <div class="container container-sm">
 
         <div class="row load-more-target">
