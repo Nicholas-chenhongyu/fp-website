@@ -1,82 +1,85 @@
 .language-select {
-  .btn.dropdown-toggle {
-    color: $black !important;
-    &::after {
-      border: none !important;
-      content: "\f078";
-      font-family: "Font Awesome 5 Free";
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-      margin-left: 6px;
-      height: 14px;
-      width: 14px;
-      background-size: 14px auto;
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: all 0.3s ease;
+    .btn.dropdown-toggle {
+        color: $black !important;
+        &::after {
+            border: none !important;
+            content: "\f078";
+            font-family: "Font Awesome 5 Free";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+            margin-left: 6px;
+            height: 14px;
+            width: 14px;
+            background-size: 14px auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.3s ease;
+        }
+        &[aria-expanded="true"]::after {
+            @include transform(rotate(180deg));
+        }
     }
-    &[aria-expanded="true"]::after {
-      @include transform(rotate(180deg));
+
+    a,
+    .btn.dropdown-select {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        text-transform: uppercase;
+        font-family: $font-d-din-bold-exp;
+        font-size: 0.875rem;
     }
-  }
 
-  a,
-  .btn.dropdown-select {
-    display: flex;
-    align-items: center;
-    line-height: 1;
-    text-transform: uppercase;
-    font-family: $font-d-din-bold-exp;
-    font-size: 0.875rem;
-  }
+    a:hover {
+        color: $orange;
+    }
 
-  a:hover {
-    color: $orange;
-  }
+    img {
+        width: 18px;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+        margin-right: 8px;
+    }
 
-  img {
-    width: 18px;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
-    margin-right: 8px;
-  }
-
-  .dropdown-menu {
-    min-width: auto;
-    width: max-content;
-    left: 50%;
-    @include transform(translate3d(-50%, 42px, 0px));
-  }
+    .dropdown-menu {
+        min-width: auto;
+        width: max-content;
+        left: 50%;
+        @include transform(translate3d(-50%, 42px, 0px));
+    }
 }
 
 .language-container {
-  position: relative;
-  margin: 50px auto;
-  z-index: 3;
-  .language-select {
-    position: absolute;
-    left: 0;
-    padding: 0 20px;
-    margin-left: -20px;
-    .btn,
-    .dropdown-item {
-      font-weight: 600;
+    position: relative;
+    margin: 50px auto;
+    z-index: 3;
+    .language-select {
+        position: relative;
+        left: 0;
+        padding: 0 20px;
+        margin-left: -20px;
+        @include media-breakpoint-up-width(md) {
+            position: absolute;
+        }
+        .btn,
+        .dropdown-item {
+            font-weight: 600;
+        }
+        .btn.dropdown-toggle {
+            border: 2px solid $orange;
+            padding: 6px 10px;
+            color: $orange !important;
+            width: 150px;
+            justify-content: center;
+            &::after {
+                filter: invert(35%) sepia(66%) saturate(2274%) hue-rotate(2deg) brightness(105%) contrast(104%);
+            }
+        }
+        .dropdown-menu {
+            width: 150px;
+            a {
+                justify-content: flex-start;
+            }
+        }
     }
-    .btn.dropdown-toggle {
-      border: 2px solid $orange;
-      padding: 6px 10px;
-      color: $orange !important;
-      width: 150px;
-      justify-content: center;
-      &::after {
-        filter: invert(35%) sepia(66%) saturate(2274%) hue-rotate(2deg) brightness(105%) contrast(104%);
-      }
-    }
-    .dropdown-menu {
-      width: 150px;
-      a {
-        justify-content: flex-start;
-      }
-    }
-  }
 }
