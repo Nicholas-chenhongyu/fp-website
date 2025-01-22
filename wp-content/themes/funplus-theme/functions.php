@@ -453,7 +453,7 @@ function fp_hidden_code_submit()
         3 => 'Whispershell',
         4 => 'The eye sees through time',
         5 => 'Ancient order',
-        6 => 'Fxxxxx',
+        6 => 'Arise',
         7 => 'Gxxxxx',
         8 => 'Hxxxxx',
         9 => 'Ixxxxx',
