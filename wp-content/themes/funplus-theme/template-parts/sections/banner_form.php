@@ -17,8 +17,7 @@ $spacing = get_sub_field('section_spacing') ? 'section-spacing' : 'no-section-sp
     <div class="container container-sm">
         <div class="row">
             <div class="col-12 col-md-8">
-                <div class="banner-block">
-                    <img src="<?php echo $banner['url'] ?>" alt="<?php echo $banner['alt'] ?>">
+                <div class="banner-block" style="background-image: url(<?php echo $banner['url'] ?>);">
                 </div>
             </div>
             <div class="col-12 col-md-4">

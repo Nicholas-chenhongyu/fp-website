@@ -5,12 +5,8 @@
         height: 100%;
         margin-bottom: 20px;
         padding-bottom: 20px;
-        img {
-            max-width: 100%;
-            border-radius: 30px;
-            object-fit: cover;
-            height: 100%;
-        }
+        border-radius: 30px;
+        background-size: cover;
         @include media-breakpoint-up-width(md) {
             margin-bottom: 0px;
             padding-bottom: 0;

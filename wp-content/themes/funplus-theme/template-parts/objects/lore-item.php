@@ -26,15 +26,15 @@ $id = $args['id'];
     <?php endif; ?>
 
     <?php if ($status == 'current') : ?>
-        <a href="javascript:;">
+        <div>
             <img src="<?php echo get_stylesheet_directory_uri() . '/assets/lore-current.png' ?>" alt="">
-        </a>
+        </div>
     <?php endif; ?>
 
     <?php if ($status == 'locked') : ?>
-        <a href="javascript:;">
+        <div>
             <img src="<?php echo get_stylesheet_directory_uri() . '/assets/lore-locked.png' ?>" alt="">
-        </a>
+        </div>
     <?php endif; ?>
 
 </div>
