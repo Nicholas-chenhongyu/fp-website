@@ -13,6 +13,8 @@ $extra_logo = get_field('extra_logo');
 $extra_logo_link = get_field('extra_logo_link');
 $banner_id = str_replace('.', '', uniqid('banner_'));
 
+$if_pre = get_field('if_pre');
+
 $ios_link = get_field('ios_link');
 $android_link = get_field('android_link');
 $pc_link = get_field('pc_link');
@@ -76,7 +78,9 @@ $height = empty($bg_image) ? 'fixed-height' : '';
                         if ($ios_link) {
                             echo '<div class="link">';
                             echo '<a href="' . $ios_link . '" target="_blank">';
-                            echo '<img src="' . get_template_directory_uri() . '/assets/btn-ios.png'  . '" />';
+                            echo '<img src="' . get_template_directory_uri() . '/assets/btn-ios';
+                            echo  $if_pre ? '-pre' : '';
+                            echo '.png'  . '" />';
                             echo '</a>';
                             echo '</div>';
                         }
@@ -87,7 +91,9 @@ $height = empty($bg_image) ? 'fixed-height' : '';
                         if ($android_link) {
                             echo '<div class="link">';
                             echo '<a href="' . $android_link . '" target="_blank">';
-                            echo '<img src="' . get_template_directory_uri() . '/assets/btn-android.png'  . '" />';
+                            echo '<img src="' . get_template_directory_uri() . '/assets/btn-android';
+                            echo $if_pre ? '-pre' : '';
+                            echo '.png'  . '" />';
                             echo '</a>';
                             echo '</div>';
                         }
