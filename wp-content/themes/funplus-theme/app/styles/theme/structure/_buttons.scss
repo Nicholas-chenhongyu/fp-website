@@ -1,4 +1,4 @@
-.btn{
+.btn {
     display: inline-block;
     outline: 0 !important;
     font-family: $font-d-din-bold-exp;
@@ -8,92 +8,94 @@
     padding: 12px 20px;
     border: none;
     opacity: 1;
-    @include transition(.5s opacity ease);
+    @include transition(0.5s opacity ease);
     @include boxShadow(none);
 
     &:focus,
-    &:hover{
+    &:hover {
         // opacity: .7;
         outline: 0 !important;
-        @include boxShadow(none); 
+        @include boxShadow(none);
     }
-    &.btn-toggle{
+    &.btn-toggle {
         padding: 0;
     }
-    &.btn-primary{
+    &.btn-primary {
         background-color: $orange;
         color: $white;
 
-        &:active{
+        &:active {
             background-color: $orange !important;
         }
     }
-    &.btn-secondary{
+    &.btn-secondary {
         background-color: $black;
         color: $white;
     }
-    &.btn-light{
+    &.btn-light {
         background-color: $white;
         color: $black;
     }
-    &.btn-dark{
+    &.btn-dark {
         background-color: $black;
         color: $white;
     }
-    &.btn-plus{
-        position:relative;
-        display:inline-flex;
+    &.btn-plus {
+        position: relative;
+        display: inline-flex;
         align-items: center;
-        overflow:hidden;
+        overflow: hidden;
 
         @include borderRadius(8px);
-        opacity:1;
+        opacity: 1;
 
-        &.btn-plus-orange{
+        &.btn-plus-orange {
             .btn__icon {
-                color:$orange
+                color: $orange;
             }
         }
-        &.btn-plus-white{
+        &.btn-plus-white {
             .btn__icon {
-                color:$white
+                color: $white;
             }
         }
-        &.btn-plus-black{
+        &.btn-plus-black {
             .btn__icon {
-                color:$black
+                color: $black;
             }
         }
-        &.btn-plus-right{
+        &.btn-plus-right {
             flex-direction: row-reverse;
         }
 
         .btn__text {
-            position:relative;
-            z-index:1;
-            transition:color 0.5s cubic-bezier(.8,.25,.25,.79);
+            position: relative;
+            z-index: 1;
+            transition: color 0.5s cubic-bezier(0.8, 0.25, 0.25, 0.79);
         }
 
         .btn__icon {
-            position:relative;
-            display:block;
-            z-index:1;
-            margin-right:16px;
-            width:22px;
-            min-width:22px;
-            transition:color 0.5s cubic-bezier(.8,.25,.25,.79),transform 0.5s cubic-bezier(.8,.25,.25,.79) 0.25s;
+            position: relative;
+            display: block;
+            z-index: 1;
+            margin-right: 16px;
+            width: 22px;
+            min-width: 22px;
+            transition:
+                color 0.5s cubic-bezier(0.8, 0.25, 0.25, 0.79),
+                transform 0.5s cubic-bezier(0.8, 0.25, 0.25, 0.79) 0.25s;
         }
 
         .btn__background {
-            position:absolute;
-            top:0;
-            bottom:0;
-            left:0;
-            right:0;
-            width:100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
             clip-path: polygon(0 0, 0 100%, -25% 100%, 0% 0);
 
-            transition: clip-path 0.5s cubic-bezier(.8,.25,.25,.79)
+            transition: clip-path 0.5s cubic-bezier(0.8, 0.25, 0.25, 0.79);
         }
 
         &:hover {
@@ -102,75 +104,74 @@
             }
 
             .btn__icon {
-                transform:rotate(90deg)
+                transform: rotate(90deg);
             }
         }
 
-        &.btn-primary,&.btn-light {
+        &.btn-primary,
+        &.btn-light {
             .btn__icon {
-                color:$white;
+                color: $white;
             }
             .btn__background {
-                background-color:$white;
+                background-color: $white;
             }
 
             &:hover {
                 .btn__text {
-                    color:$black;
-                }
-    
-                .btn__icon {
-                    color:$orange;
+                    color: $black;
                 }
 
+                .btn__icon {
+                    color: $orange;
+                }
             }
         }
 
         &.btn-light {
             .btn__icon {
-                color:$orange;
+                color: $orange;
             }
             .btn__background {
-                background-color:$orange;
+                background-color: $orange;
             }
 
             &:hover {
                 .btn__text {
-                    color:$white;
-                }
-    
-                .btn__icon {
-                    color:$white;
+                    color: $white;
                 }
 
+                .btn__icon {
+                    color: $white;
+                }
             }
         }
 
-        &.btn-secondary,&.btn-dark {
+        &.btn-secondary,
+        &.btn-dark {
             .btn__icon {
-                color:$white;
+                color: $white;
             }
             .btn__background {
-                background-color:$white;
+                background-color: $white;
             }
 
             &:hover {
                 .btn__text {
-                    color:$black;
-                }
-    
-                .btn__icon {
-                    color:$orange;
+                    color: $black;
                 }
 
+                .btn__icon {
+                    color: $orange;
+                }
             }
         }
 
         &.btn-small {
             padding: 7px 16px 7px 9px;
             .btn__icon {
-                width:14px;
-                min-width:14px;
+                width: 14px;
+                min-width: 14px;
             }
             .btn__text {
                 font-style: normal;
@@ -180,18 +181,18 @@
             }
         }
     }
-    &.btn-text{
+    &.btn-text {
         color: $black;
         font-family: $font-d-din-normal;
 
         .btn__icon {
-            margin-right:16px;
+            margin-right: 16px;
         }
-        
+
         &.btn-plus-right {
             .btn__icon {
-                margin-right:0px;
-                margin-left:16px;
+                margin-right: 0px;
+                margin-left: 16px;
             }
         }
     }
@@ -206,33 +207,33 @@
             bottom: 15px;
         }
     }
-    &.btn-lg{
+    &.btn-lg {
         font-size: 2.5rem;
         line-height: auto;
         letter-spacing: 3.35px;
 
-        &.btn-plus{
+        &.btn-plus {
             background-size: 30px;
             padding-left: 66px;
 
-            &.btn-plus-right{
+            &.btn-plus-right {
                 padding-left: 20px;
                 padding-right: 66px;
             }
         }
     }
-    &.btn-subscribe{
+    &.btn-subscribe {
         font-family: $font-d-din-bold-exp;
         background-color: $orange-alt;
         font-size: 1rem;
         color: $black;
         letter-spacing: 0.86px;
     }
-    &.load-more{
+    &.load-more {
         font-family: $font-d-din-bold-exp;
         margin: auto;
     }
-    &.btn-faq{
+    &.btn-faq {
         position: relative;
         background-color: transparent;
         padding: 10px 30px 10px 0px;
@@ -248,78 +249,79 @@
         background-position: right 1px center;
         background-repeat: no-repeat;
         text-align: left;
-        @include transition(.1s background-image ease);
+        @include transition(0.1s background-image ease);
 
         .btn__text {
             background-color: white;
             position: relative;
             z-index: 1;
             padding-right: 25px;
+            max-width: 90%;
         }
-        &.collapsed{
+        &.collapsed {
             background-image: url("data:image/svg+xml,%3Csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.5791 10.0786H21.6829C20.1576 10.0786 18.9219 8.84288 18.9219 7.31758V4.42144C18.9219 1.98868 16.9526 0 14.5005 0C12.0677 0 10.0791 1.96937 10.0791 4.42144V7.31758C10.0791 8.84288 8.84336 10.0786 7.31806 10.0786H4.42193C1.98917 10.0786 0.000488281 12.0479 0.000488281 14.5C0.000488281 16.9328 1.96986 18.9214 4.42193 18.9214H7.31806C8.84336 18.9214 10.0791 20.1571 10.0791 21.6824V24.5786C10.0791 27.0113 12.0484 29 14.5005 29C16.9332 29 18.9219 27.0306 18.9219 24.5786V21.6824C18.9219 20.1571 20.1576 18.9214 21.6829 18.9214H24.5791C27.0118 18.9214 29.0005 16.9521 29.0005 14.5C29.0005 12.0479 27.0311 10.0786 24.5791 10.0786Z' fill='%23FF5A00'/%3E%3C/svg%3E%0A");
         }
-        div{
+        div {
             background-image: none;
             background-repeat: repeat;
             background-origin: right;
             height: 3px;
             width: calc(100% - 54px);
-            position:absolute;
-            left:0;
-            right:0;
+            position: absolute;
+            left: 0;
+            right: 0;
 
-            @include media-breakpoint-up-width(md){
+            @include media-breakpoint-up-width(md) {
                 background-image: url("data:image/svg+xml,%3Csvg width='521' height='4' viewBox='0 0 521 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.00049 2L519.001 2.00005' stroke='%23FF5A00' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='0.1 8'/%3E%3C/svg%3E%0A");
             }
         }
-        @include media-breakpoint-up-width(md){
-            white-space: nowrap;
-        }
+        // @include media-breakpoint-up-width(md){
+        //     white-space: nowrap;
+        // }
     }
 }
 
 .btn-chevron {
-    position:absolute;
-    align-items:center;
+    position: absolute;
+    align-items: center;
     justify-content: center;
-    height:100%;
-    width:120px;
-    margin-top:0px;
+    height: 100%;
+    width: 120px;
+    margin-top: 0px;
     color: $white;
     border: none;
-    top:0;
-    right:0px;
+    top: 0;
+    right: 0px;
     // opacity:1;
-    outline:none;
-    z-index:10;
-    display:none;
-    background-color:transparent;
+    outline: none;
+    z-index: 10;
+    display: none;
+    background-color: transparent;
 
-    @include media-breakpoint-up-width(sm){
-        display:flex
+    @include media-breakpoint-up-width(sm) {
+        display: flex;
     }
 
     &:focus {
-        outline:none;
+        outline: none;
     }
 
     .chevron {
-      .chevron-line-1,
-      .chevron-line-2 {
-        fill: none;
-        stroke: $white;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 4px;
-        stroke-dasharray: 20;
-        stroke-dashoffset: 20;
-      }
+        .chevron-line-1,
+        .chevron-line-2 {
+            fill: none;
+            stroke: $white;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 4px;
+            stroke-dasharray: 20;
+            stroke-dashoffset: 20;
+        }
     }
 
     &.btn--prev {
-        left:0px;
-        transform:scaleX(-1)
+        left: 0px;
+        transform: scaleX(-1);
     }
     &.btn--black {
         .chevron {
@@ -330,19 +332,19 @@
         }
     }
 }
-.animated{
+.animated {
     .btn-chevron {
         .chevron {
-            width:75px;
+            width: 75px;
             .chevron-line-1 {
                 stroke-dashoffset: 0;
                 transition: stroke-dashoffset 1s ease-in 1s;
-              }
-    
-              .chevron-line-2 {
+            }
+
+            .chevron-line-2 {
                 stroke-dashoffset: 0;
                 transition: stroke-dashoffset 1s ease-out 1.75s;
-              }
+            }
         }
     }
 }
