@@ -234,6 +234,7 @@
 }
 
 .mobile-nav {
+    overflow-y: scroll;
     background-color: $orange;
     transform: translateY(100%);
     position: fixed;
