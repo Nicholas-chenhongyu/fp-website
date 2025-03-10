@@ -310,9 +310,23 @@
             a {
                 color: $white;
             }
+            .sub-menu {
+                list-style: none;
+                li {
+                    margin-bottom: 20px;
+                    a {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
         }
     }
 }
 body.home > .sections {
-    padding-top: 100px;
+    padding-top: 90px;
+    .banner-wrapper {
+        margin-bottom: 40px;
+    }
+    @include media-breakpoint-up-width(md) {
+    }
 }

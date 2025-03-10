@@ -1,7 +1,7 @@
 // Links
 a {
     color: $orange;
-    @include transition(opacity .4s linear, color .4s linear, background-color .4s linear, border .4s linear);
+    @include transition(opacity 0.4s linear, color 0.4s linear, background-color 0.4s linear, border 0.4s linear);
 }
 a:hover,
 a:focus {
@@ -9,116 +9,128 @@ a:focus {
     text-decoration: none;
 }
 // Headings
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
     font-family: $font-d-din-bold;
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-h1, .h1 {
+h1,
+.h1 {
     font-size: 4.8rem;
     line-height: 5.4rem;
-    
-    @include media-breakpoint-up-width (sm) {
+
+    @include media-breakpoint-up-width(sm) {
         font-size: 5.4rem;
         line-height: 6rem;
     }
-    @include media-breakpoint-up-width (md) {
+    @include media-breakpoint-up-width(md) {
         font-size: 6.4rem;
         line-height: 7rem;
     }
-    @include media-breakpoint-up-width (lg) {
+    @include media-breakpoint-up-width(lg) {
         font-size: 7rem;
         line-height: 7.6rem;
     }
-    @include media-breakpoint-up-width (xl) {
+    @include media-breakpoint-up-width(xl) {
         font-size: 7.6rem;
         line-height: 8.2rem;
     }
 }
 
-h2, .h2 {
+h2,
+.h2 {
     font-size: 3.5rem;
     line-height: 3.5rem;
     letter-spacing: 9.1px;
 
-    @include media-breakpoint-up-width(lg){
+    @include media-breakpoint-up-width(lg) {
         font-size: 4rem;
         line-height: 4.563rem;
         letter-spacing: 5.1px;
-    }   
+    }
 }
 
-h3, .h3, .subheading {
+h3,
+.h3,
+.subheading {
     font-family: $font-d-din-normal;
     font-size: 2rem;
     line-height: 2.5rem;
     letter-spacing: 3.35px;
-    
 
-    @include media-breakpoint-up-width(md){
+    @include media-breakpoint-up-width(md) {
         font-size: 2.5rem;
         line-height: 2.75rem;
         letter-spacing: 3.35px;
     }
 }
-.subheading{
+.subheading {
     color: $orange;
     font-family: $font-d-din-bold;
     text-align: center;
 }
 
-h4, .h4 {
+h4,
+.h4 {
     text-transform: uppercase;
     font-family: $font-d-din-bold;
     font-size: 1.5rem;
     line-height: 2rem;
     letter-spacing: 0.48px;
 
-    @include media-breakpoint-up-width(md){
+    @include media-breakpoint-up-width(md) {
         font-size: 1.5rem;
         line-height: 2rem;
         letter-spacing: 0.48px;
     }
 }
 
-h5, .h5 {
+h5,
+.h5 {
     font-size: 1.8rem;
     line-height: 2.4rem;
-    
-    @include media-breakpoint-up-width (sm) {
+
+    @include media-breakpoint-up-width(sm) {
         font-size: 1.8rem;
         line-height: 2.4rem;
     }
-    @include media-breakpoint-up-width (md) {
+    @include media-breakpoint-up-width(md) {
         font-size: 2rem;
         line-height: 2.6rem;
     }
-    @include media-breakpoint-up-width (lg) {
+    @include media-breakpoint-up-width(lg) {
         font-size: 2.2rem;
         line-height: 2.8rem;
     }
-    @include media-breakpoint-up-width (xl) {
+    @include media-breakpoint-up-width(xl) {
         font-size: 2.4rem;
         line-height: 3rem;
     }
 }
 
-h6, .h6 {
+h6,
+.h6 {
     font-size: 1.8rem;
     line-height: 2.4rem;
-    
-    @include media-breakpoint-up-width (sm) {
+
+    @include media-breakpoint-up-width(sm) {
         font-size: 1.8rem;
         line-height: 2.4rem;
     }
-    @include media-breakpoint-up-width (md) {
+    @include media-breakpoint-up-width(md) {
         font-size: 2rem;
         line-height: 2.6rem;
     }
@@ -135,8 +147,8 @@ h6, .h6 {
 .lead {
     font-size: 1.8rem;
     line-height: 2.4rem;
-    
-    @include media-breakpoint-up-width (lg) {
+
+    @include media-breakpoint-up-width(lg) {
         font-size: 1.9rem;
         line-height: 2.6rem;
     }

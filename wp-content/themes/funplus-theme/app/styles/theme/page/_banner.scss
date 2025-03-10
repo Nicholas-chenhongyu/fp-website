@@ -130,6 +130,14 @@
                     display: block;
                     font-size: 3.375rem;
                     line-height: 3.563rem;
+                    & > div {
+                        display: inline-block;
+                    }
+                    @include media-breakpoint-up-width(md) {
+                        & > div {
+                            display: block;
+                        }
+                    }
                 }
                 span:last-of-type {
                     margin-top: -4px;
@@ -220,20 +228,17 @@
                     }
                     span:nth-child(2) {
                         margin-top: -8px;
-                        font-size: 9.375rem;
-                        line-height: 7.6rem;
+                        font-size: 7.5rem;
+                        line-height: 6.5rem;
                         letter-spacing: 6px;
                         margin-left: -4.5px;
+                        margin-left: -8.5px;
                         div::after {
                             display: inline-block;
                             position: relative;
                             content: "";
                             width: 50px;
                             border-bottom: 15px solid #fff;
-                        }
-
-                        @include media-breakpoint-up-width(lg) {
-                            margin-left: -8.5px;
                         }
                     }
                     span:last-of-type {

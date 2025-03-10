@@ -35,37 +35,15 @@
 
 <section class="career-list post-loop" id="<?php echo esc_attr($loadMore_id); ?>" data-max="<?php echo $max ?>">
 
-  <!-- Career List -->
-  <div class="container container-sm">
-    <?php
-    // $response = wp_remote_get(
-    //   "https://api.factorialhr.com/api/v1/ats/job_postings",
-    //   [
-    //     'headers' => [
-    //       'Content-Type' => 'application/json',
-    //       'X-Api-Key' => '2648e57deebccbbddb8acaa2548bbd08e138b50105999d6285c020a964ed3d52'
-    //     ]
-    //   ]
-    // );
-    // $jobs = json_decode($response['body']);
-    // // debug($jobs);
-    // foreach ($jobs as $job) {
-    //   echo $job->title;
-    //   echo PHP_EOL;
-    // }
-    ?>
-    <iframe width="100%" height="800" src="https://funplus.factorialhr.com/embed/jobs" frameborder="0"></iframe>
-  </div>
+    <!-- Career List -->
+    <div class="container container-sm vendor-iframe">
+        <iframe width="100%" height="800" src="https://funplus.factorialhr.com/embed/jobs" frameborder="0"></iframe>
+    </div>
 </section>
 
-
-
-<!-- <script src="https://jobs.jobvite.com/__assets__/scripts/careersite/public/iframe.js"></script> -->
-
-<!-- <script type="text/javascript">
-    jQuery(document).ready(() => {
-        initLoadMore('<?php
-                      // echo $loadMore_id; 
-                      ?>');
-    });
-</script> -->
+<style>
+    .vendor-iframe {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+    }
+</style>

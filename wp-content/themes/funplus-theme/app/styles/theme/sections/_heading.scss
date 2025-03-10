@@ -1,23 +1,23 @@
 $headingSizeDesktop: 5rem;
-$headingSizeMobile: 3.2rem;
+$headingSizeMobile: 2.2rem;
 $headingLineheightDesktop: 4.563rem;
-$headingLineheightMobile: 3.2rem;
+$headingLineheightMobile: 2.4rem;
 
 $headingPrefixSizeDesktop: 1.75rem;
-$headingPrefixSizeMobile: 1.1rem;
+$headingPrefixSizeMobile: 0.8rem;
 $headingPrefixLineheightDesktop: 1.901rem;
 $headingPrefixLineheightMobile: 1.493rem;
 
 $headingLineSizeDesktop: 129px;
-$headingLineSizeMobile: 96px;
+$headingLineSizeMobile: 80px;
 
 // As a flexible section
-.heading-block .heading{
+.heading-block .heading {
     margin-bottom: 0 !important;
 }
 
 // Global Heading
-.heading{
+.heading {
     margin-bottom: 18px;
     display: block;
     align-items: center;
@@ -25,16 +25,16 @@ $headingLineSizeMobile: 96px;
     width: 100%;
     padding: 0;
 
-    .heading-prefix{
+    .heading-prefix {
         position: relative;
-        display:flex;
+        display: flex;
         font-family: $font-d-din-bold;
 
-        span{
+        span {
             color: $orange;
         }
 
-        &__prefix{
+        &__prefix {
             display: flex;
             text-transform: uppercase;
             transform-origin: top right;
@@ -42,11 +42,11 @@ $headingLineSizeMobile: 96px;
 
             margin-right: 18px;
 
-            @include media-breakpoint-up-width(lg){
+            @include media-breakpoint-up-width(lg) {
                 margin-right: 35px;
             }
 
-            p{
+            p {
                 color: $orange;
                 margin: 0;
                 font-size: $headingPrefixSizeMobile;
@@ -55,44 +55,42 @@ $headingLineSizeMobile: 96px;
                 writing-mode: vertical-rl;
                 transform: rotate(180deg);
                 text-align: end;
-
-
             }
-            &__underline{
+            &__underline {
                 opacity: 0;
                 height: $headingLineSizeMobile;
 
                 @include animationDelay(0.6s);
 
-                @include media-breakpoint-up-width(lg){
+                @include media-breakpoint-up-width(lg) {
                     height: 129px;
-
                 }
                 width: 6px;
                 background-color: $orange;
-                margin-left: 18px;
+                margin-left: 12px;
 
-                @include media-breakpoint-up-width(lg){
+                @include media-breakpoint-up-width(lg) {
                     margin-left: 30px;
                 }
             }
         }
-        &__heading{
+        &__heading {
             font-family: inherit;
             font-size: $headingSizeMobile;
             line-height: $headingLineheightMobile;
+            letter-spacing: 2px;
             white-space: wrap;
         }
     }
-    .description{
+    .description {
         max-width: 100%;
         margin-top: 18px;
         padding-left: 0;
 
-        p{
+        p {
             font-size: 1rem;
 
-            @include media-breakpoint-up-width(lg){
+            @include media-breakpoint-up-width(lg) {
                 font-size: 1.1rem;
                 line-height: 1.8rem;
             }
@@ -100,76 +98,76 @@ $headingLineSizeMobile: 96px;
     }
 
     // Desktop
-    @include media-breakpoint-up-width(lg){
+    @include media-breakpoint-up-width(lg) {
         // margin-bottom: 63px;
         display: flex;
 
-        .heading-prefix{
-            &__prefix{
+        .heading-prefix {
+            &__prefix {
                 margin-left: 0px;
                 max-height: 132px;
                 // left: -$headingLineSizeDesktop;
                 // @include transform(rotate(-90deg) translateY(-97px));
 
-                p{
+                p {
                     font-size: $headingPrefixSizeDesktop;
                     line-height: $headingPrefixLineheightDesktop;
                 }
-                &__underline{
+                &__underline {
                     height: 100%;
-                    width:6px
+                    width: 6px;
                     // margin-top: 26px;
                 }
             }
-            &__heading{
+            &__heading {
                 font-size: $headingSizeDesktop;
                 line-height: $headingLineheightDesktop;
-                margin-top:-4px;
+                margin-top: -4px;
                 white-space: nowrap;
             }
         }
-        .description{
+        .description {
             margin-top: 0;
             padding-left: 100px;
         }
     }
 
     @include media-breakpoint-up-width(xl) {
-        .heading-prefix{
-            &__prefix{
+        .heading-prefix {
+            &__prefix {
                 margin-left: -27px;
             }
         }
     }
 
     // Animations
-    &.fadeInUpwards{
+    &.fadeInUpwards {
         @include animationDelay(0s);
         @include animationDuration(1.2s);
     }
-    .heading-prefix__prefix p.fadeIn{
-        @include animationDelay(.4s);
-        @include animationDuration(.6s);
+    .heading-prefix__prefix p.fadeIn {
+        @include animationDelay(0.4s);
+        @include animationDuration(0.6s);
     }
-    .heading-prefix__prefix .heading-prefix__prefix__underline.uncoverFromLeft{
-        @include animationDelay(.6s);
-        @include animationDuration(.6s);
+    .heading-prefix__prefix .heading-prefix__prefix__underline.uncoverFromLeft {
+        @include animationDelay(0.6s);
+        @include animationDuration(0.6s);
     }
-    .heading-prefix__heading.fadeIn{
+    .heading-prefix__heading.fadeIn {
         @include animationDelay(1.2s);
-        @include animationDuration(.6s);
+        @include animationDuration(0.6s);
     }
-    .description.fadeIn{
+    .description.fadeIn {
         @include animationDelay(1.4s);
-        @include animationDuration(.6s);
+        @include animationDuration(0.6s);
     }
 }
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 :target:before {
-  content: "";
-  display: block;
-  height: 100px;
-  margin: -100px 0 0;
+    content: "";
+    display: block;
+    height: 100px;
+    margin: -100px 0 0;
 }
