@@ -454,10 +454,10 @@ function fp_hidden_code_submit()
         4 => 'The eye sees through time',
         5 => 'Ancient order',
         6 => 'Arise',
-        7 => 'Gxxxxx',
-        8 => 'Hxxxxx',
-        9 => 'Ixxxxx',
-        10 => 'Jxxxxx'
+        7 => 'Cradle',
+        8 => 'Fear the undead',
+        9 => 'Compass',
+        10 => 'Treasure'
     ];
     if (strtolower($code_submit) === strtolower($code[$current_lore])) {
         get_template_part('template-parts/objects/lore', 'item', [
