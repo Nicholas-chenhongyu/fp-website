@@ -249,6 +249,23 @@
             "placeholder": ""
         },
         {
+            "key": "field_67e0ce39e8817",
+            "label": "Website Link",
+            "name": "website_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_6707848c0daca",
             "label": "Comic Link",
             "name": "comic_link",
@@ -362,5 +379,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1740395462
+    "modified": 1742786118
 }
