@@ -22,7 +22,7 @@ $loadMore_id = str_replace('.', '', uniqid('loadMore_'));
 
     <!-- Career List -->
     <div class="container container-sm">
-        
+
         <div class="row load-more-target">
             <?php if ($info->have_posts()) :
                 while ($info->have_posts()) :
@@ -42,7 +42,8 @@ $loadMore_id = str_replace('.', '', uniqid('loadMore_'));
                 'load_args' => [
                     'post_type' => 'insider_info',
                     'posts_per_page' => 3,
-                    'paged' => 2
+                    'paged' => 2,
+                    'post_status' => 'publish',
                 ]
             ];
             get_template_part('template-parts/global/load-more', null, $args);

@@ -425,7 +425,7 @@ function fp_ajax_load_more()
     $index = isset($_POST['args']['posts_per_page']) ? $_POST['args']['posts_per_page'] : 0;
     query_posts($args);
     while (have_posts()) {
-        the_post();
+        the_post('post_status=publish');
         get_template_part('template-parts/global/' . $args['post_type'], false, ['index' => $index]);
         $index++;
     }
