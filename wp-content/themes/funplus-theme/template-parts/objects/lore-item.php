@@ -20,7 +20,7 @@ $id = $args['id'];
 
 <div class="lore-inner">
     <?php if ($status == 'unlocked') : ?>
-        <a href="<?php echo $links[$id] ?>" target="_blank">
+        <a href="<?php echo $links[$id] . "/LEDy2KzhEflMxoAv" ?>" target="_blank">
             <img src="<?php echo get_stylesheet_directory_uri() . '/assets/lore-unlocked.png' ?>" alt="">
         </a>
     <?php endif; ?>
