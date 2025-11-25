@@ -346,6 +346,11 @@
                 "param": "post_template",
                 "operator": "!=",
                 "value": "page-bravo.php"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "page-form-only.php"
             }
         ],
         [
@@ -379,5 +384,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1742786118
+    "modified": 1764038725
 }
