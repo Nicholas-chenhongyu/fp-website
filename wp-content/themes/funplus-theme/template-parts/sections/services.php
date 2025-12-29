@@ -8,7 +8,11 @@
 // Content
 $services = get_sub_field('services');
 $two_in_row = get_sub_field('row_two');
-$layoutClass = $two_in_row ? 'col-12 col-md-6 col-lg-4 offset-0' : 'col-12 col-md-6 col-lg-3 offset-0'
+$layoutClass = $two_in_row ? 'col-12 col-md-6 col-lg-5 offset-0' : 'col-12 col-md-6 col-lg-3 offset-0';
+$rowClass = $two_in_row ? 'row--two-in-row' : 'row--three-in-row';
+$disable_bg_color = get_sub_field('disable_background_color');
+$bg_color = $disable_bg_color ? 'transparent' : '';
+$icon_size = $disable_bg_color ? 'large' : '';
 ?>
 
 <section class="section services wow" data-wow-offset="70">
@@ -38,11 +42,11 @@ $layoutClass = $two_in_row ? 'col-12 col-md-6 col-lg-4 offset-0' : 'col-12 col-m
         </div>
 
         <!-- Content -->
-        <div class="row">
+        <div class="row <?php echo $rowClass; ?>">
             <?php for ($i = 0; $i < count($services); $i++) : ?>
                 <div class="<?php echo $layoutClass; ?> offset-lg-1 grid-item wow">
                     <div class="services__service" style="--index:<?= $i; ?>">
-                        <div class="services__service__icon">
+                        <div class="services__service__icon <?php echo $icon_size; ?>" style="background-color: <?php echo $bg_color ?>">
                             <?php echo wp_get_attachment_image($services[$i]['icon'], 'full', '', []); ?>
                         </div>
                         <p class="services__service__num"><?php echo $i + 1; ?></p>

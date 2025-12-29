@@ -23,6 +23,26 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_6951f0b310bbb",
+            "label": "Disable Background Color",
+            "name": "disable_background_color",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_60ccbd8aa5428",
             "label": "Services",
             "name": "services",
@@ -154,5 +174,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1729072179
+    "modified": 1766977763
 }
