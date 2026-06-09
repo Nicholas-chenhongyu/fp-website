@@ -266,6 +266,78 @@
             "placeholder": ""
         },
         {
+            "key": "field_6a27cf779c4f0",
+            "label": "xbox",
+            "name": "xbox_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6a218c7a9e937",
+            "label": "Steam",
+            "name": "steam_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6a218cee9e938",
+            "label": "PS5",
+            "name": "ps5_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6a218d049e939",
+            "label": "Epic Games Store",
+            "name": "epic_games_store_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_6707848c0daca",
             "label": "Comic Link",
             "name": "comic_link",
@@ -346,11 +418,6 @@
                 "param": "post_template",
                 "operator": "!=",
                 "value": "page-bravo.php"
-            },
-            {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "page-form-only.php"
             }
         ],
         [
@@ -384,5 +451,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1764038725
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1780993926
 }
