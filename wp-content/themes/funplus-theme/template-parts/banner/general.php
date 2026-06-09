@@ -26,6 +26,11 @@ $comic_link = get_field('comic_link');
 $custom_icon = get_field('custom_icon');
 $custom_link = get_field('custom_link');
 
+$xbox_link = get_field('xbox_link');
+$steam_link = get_field('steam_link');
+$ps5_link = get_field('ps5_link');
+$epic_games_store_link = get_field('epic_games_store_link');
+
 
 // Height
 // We need to set a fixed height if there is no featured image set
@@ -138,6 +143,46 @@ $height = empty($bg_image) ? 'fixed-height' : '';
                             echo '<div class="link">';
                             echo '<a href="' . $website_link . '" target="_blank">';
                             echo '<img src="' . get_template_directory_uri() . '/assets/btn-website.png'  . '" />';
+                            echo '</a>';
+                            echo '</div>';
+                        }
+                        ?>
+                        <!-- xbox -->
+                        <?php
+                        if ($xbox_link) {
+                            echo '<div class="link">';
+                            echo '<a href="' . $xbox_link . '" target="_blank">';
+                            echo '<img src="' . get_template_directory_uri() . '/assets/btn-xbox.png'  . '" />';
+                            echo '</a>';
+                            echo '</div>';
+                        }
+                        ?>
+                        <!-- steam -->
+                        <?php
+                        if ($steam_link) {
+                            echo '<div class="link">';
+                            echo '<a href="' . $steam_link . '" target="_blank">';
+                            echo '<img src="' . get_template_directory_uri() . '/assets/btn-steam.png'  . '" />';
+                            echo '</a>';
+                            echo '</div>';
+                        }
+                        ?>
+                        <!-- ps5 -->
+                        <?php
+                        if ($ps5_link) {
+                            echo '<div class="link">';
+                            echo '<a href="' . $ps5_link . '" target="_blank">';
+                            echo '<img src="' . get_template_directory_uri() . '/assets/btn-ps5.png'  . '" />';
+                            echo '</a>';
+                            echo '</div>';
+                        }
+                        ?>
+                        <!-- Epic -->
+                        <?php
+                        if ($epic_games_store_link) {
+                            echo '<div class="link">';
+                            echo '<a href="' . $epic_games_store_link . '" target="_blank">';
+                            echo '<img src="' . get_template_directory_uri() . '/assets/btn-epic.png'  . '" />';
                             echo '</a>';
                             echo '</div>';
                         }
